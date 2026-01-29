@@ -151,6 +151,12 @@ main section li {
     margin-bottom: 0.5rem;
 }
 
+/* Figure captions in main content */
+main figcaption {
+    font-size: 0.875rem;       /* Small font */
+    color: var(--text-secondary);
+}
+
 /* =========================
    Data Visualizations
    ========================= */
