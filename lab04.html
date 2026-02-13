@@ -22,9 +22,32 @@
 
     <main>
         <section>
-            <h2>Coming Soon</h2>
-            <p>This page will showcase my Tableau visualization project.</p>
+            <h2>California Homicide Rates</h2>
+            <h3>Introduction</h3>
+            <p>I’ve been watching a lot of old television dramas recently, including The Closer, a serial drama about a “Major Crimes” department in the Los Angeles Police Department. I use the term watching loosely here, it’s been on in the background while I’ve been doing other things in my life. Thus, when the opportunity to look at the real data that is reported by that group for this Tableau visualization, that was where my mind went first. I looked at the LAPD homicide rates over the last ten years, including the victim’s relationship to the offender, the location type, the ages of both parties, and several other variables. I wanted to see if there was any relationship between the age of both parties, their relationship status and where the incident occurred. I know, that seems like a lot. </p>
         </section>
+
+        <section>
+            <h2>Step One</h2>
+            <p>The first step was downloading all of this information from the Federal Bureau of Investigation and their incredibly helpful Crime Data Explorer. Once that was accomplished, it was supposed to be as easy as loading it into Tableau and pushing some buttons to make a nice picture. Right? Wrong. The first obstacle I ran headfirst into was that each of the variables did not download into one or two concise spreadsheets. This is not necessarily a problem, but it was an issue when we started to run into continuity issues along the data sets. I went in initially to clean up the data and try to visualize the data in a way that would make sense, by cleaning up the names of the variables, but kept running into one issue. Microsoft Excel, the program that I use primarily to edit and to view any sort of .csv file, in all its infinite wisdom and desperate need to be helpful, refused to understand that 10-19 was an age range and not October 19th. No matter what I did, how I formatted the cell, it auto-corrected with great fervor. </p>
+
+            <p>I admit, I spent a significant amount of time trying to get it to work. Finally, I got too fed up and decided to try anyway. I fiddled around with Tableau for several hours, trying to paint a picture with the data, but I think the data was a little too unique for the type of program that Tableau is. I think with a little more time, I might be able to tell a better story with the data. </p>
+        </section>
+<section>
+    <div class='tableauPlaceholder' id='viz1771002598669' style='position: relative'><noscript><a href='#'><img alt='Sheet 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;ca-homicide-rates&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='ca-homicide-rates&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ca&#47;ca-homicide-rates&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1771002598669');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+</section>
+
+    <section>
+
+    <h2>Analysis</h2>
+    
+    <p>	I decided that with the tools I had, I wanted to look for the relationships between where the crime occurred, the age of the victim, and the age of the offender. I ended up getting a nice circle graph showing where those likelihoods were, and it showed a little bit of what I expected, where the middle-aged perpetrators tended to focus on more public displays, whereas if the offender was younger, then the crime tended to occur within the place of residence. When considering the nature of this offense, this makes sense when we think about the types of crimes that people of the various age groups tend to commit in the first place. The younger offenders are more likely to be involved in crimes of passion, or crimes that are more likely to occur within the home, whereas the older offenders are more likely to be involved in crimes that are more premeditated and thus more likely to occur in public. This is a very interesting relationship that I was able to find with the data, but I think it could be represented in a much better way.</p>
+
+
+
+    </section>
+
     </main>
+
 </body>
 </html>
