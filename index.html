@@ -47,9 +47,41 @@
             <p><strong>My interests:</strong> I'm incredibly passionate about live entertainment and growing the impact that live entertainment has on audiences through exposure and through innovative digital campaigns.</p>
             <p><strong>What I hope to learn:</strong> Through this capstone, I aim to meet the goal of integrating the skills I already possess in digital culture, data analytics, and entertainment to create meaningful and impactful projects that challenge me to think outside of the box.</p>
             
-            <figure class="viz-container">
-                <img src="images/new-headshot2025.jpeg" alt="Photo of Stella Lenzie" class="about-photo">
-            </figure>
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <div class="carousel-slide">
+                            <img src="images/new-headshot2025.jpeg" alt="Stella Lenzie professional headshot">
+                        </div>
+                        <!-- Add more images from your professional events here -->
+                        <!-- Example:
+                        <div class="carousel-slide">
+                            <img src="images/event1.jpg" alt="Description of event 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/event2.jpg" alt="Description of event 2">
+                        </div>
+                        -->
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button class="carousel-button carousel-button-left" aria-label="Previous image">&lt;</button>
+                <button class="carousel-button carousel-button-right" aria-label="Next image">&gt;</button>
+                
+                <!-- Dot Indicators -->
+                <div class="carousel-nav">
+                    <button class="carousel-indicator current-slide" aria-label="Go to slide 1"></button>
+                    <!-- Add more indicators as you add more images -->
+                    <!-- Example:
+                    <button class="carousel-indicator" aria-label="Go to slide 2"></button>
+                    <button class="carousel-indicator" aria-label="Go to slide 3"></button>
+                    -->
+                </div>
+                
+                <p class="carousel-caption">Professional highlights and events</p>
+            </div>
             
         </section>
 
@@ -123,5 +155,6 @@
     </footer>
     
     <script src="js/menu.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
