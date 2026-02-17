@@ -549,7 +549,8 @@ footer a:hover {
 
     nav {
         font-size: 0.9rem;
-        position: relative;
+        position: sticky;         /* Keep sticky on mobile */
+        top: 0;                   /* Stick to top */
         padding: 1rem;
         justify-content: flex-start;  /* Align hamburger to left */
     }
