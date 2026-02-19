@@ -17,19 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let autoplayInterval;
     const autoplayDelay = 5000; // 5 seconds between slides
     
-    // Set initial slide width
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    
-    // Arrange slides next to each other
-    const setSlidePosition = (slide, index) => {
-        slide.style.left = slideWidth * index + 'px';
-    };
-    slides.forEach(setSlidePosition);
-    
     // Move to target slide
     const moveToSlide = (targetIndex) => {
-        const targetSlide = slides[targetIndex];
-        track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+        console.log(`Moving to slide ${targetIndex}`);
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        const moveAmount = slideWidth * targetIndex;
+        track.style.transform = `translateX(-${moveAmount}px)`;
         currentIndex = targetIndex;
     };
     
@@ -105,8 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            const newSlideWidth = slides[0].getBoundingClientRect().width;
-            slides.forEach(setSlidePosition);
             moveToSlide(currentIndex);
         }, 250);
     });
