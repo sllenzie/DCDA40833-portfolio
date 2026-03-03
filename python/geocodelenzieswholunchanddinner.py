@@ -49,9 +49,6 @@ import time             # For adding a small pause between API calls (be polite!
 #
 # SECURITY NOTE: Never share your access token publicly or commit it to GitHub.
 # For now, pasting it directly in the script is fine for class exercises.
-#
-# EXAMPLE (yours will be different):
-#   MAPBOX_TOKEN = "pk.eyJ1IjoieW91cnVzZXJuYW1lIiwiYSI6ImNsZXhhbXBsZSJ9.abc123"
 
 MAPBOX_TOKEN = "PASTE_YOUR_MAPBOX_TOKEN_HERE"  # <-- REPLACE THIS WITH YOUR REAL TOKEN
 
