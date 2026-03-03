@@ -287,7 +287,7 @@ for i, row in df_mapped.iterrows():
     address_display = row["Address"] if pd.notna(row["Address"]) else "Address not available"
     cuisine_display = row["Cuisine"] if pd.notna(row["Cuisine"]) else "Not listed"
     attire_display = row["Attire"] if pd.notna(row["Attire"]) else "Not specified"
-    description_display = row["Description"] if pd.notna(row["Description"]) else "No description available"
+    description_display = row["Stella's Thoughts"] if pd.notna(row["Stella's Thoughts"]) else "No description available"
     website_display = row["Website"] if pd.notna(row["Website"]) else ""
     image_url = row["Image_URL"] if pd.notna(row["Image_URL"]) else ""
 
@@ -307,7 +307,7 @@ for i, row in df_mapped.iterrows():
         {address_display}<br><br>
         <b>🍽️ Cuisine:</b> {cuisine_display}<br><br>
         <b>👔 Attire:</b> {attire_display}<br><br>
-        <b>📝 Description:</b><br>
+        <b>Stella's Thoughts:</b><br>
         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">
         {description_display}
         </div>
