@@ -50,7 +50,7 @@ import time             # For adding a small pause between API calls (be polite!
 # SECURITY NOTE: Never share your access token publicly or commit it to GitHub.
 # For now, pasting it directly in the script is fine for class exercises.
 
-MAPBOX_TOKEN = "pk.eyJ1Ijoic2xsZW56aWUiLCJhIjoiY21tYXc5YXFlMGpwdDJ3b2ltaTU4dHIxaCJ9.yAsfpMXpkTRiH-Gvn0-J-g"  # <-- REPLACE THIS WITH YOUR REAL TOKEN
+MAPBOX_TOKEN = "pk.eyJ1Ijoic2xsZW56aWUiLCJhIjoiY21tYXc5YXFlMGpwdDJ3b2ltaTU4dHIxaCJ9.yAsfpMXpkTRiH-Gvn0-J-g"  
 
 # Quick check — remind the student if they forgot to set the token
 if MAPBOX_TOKEN == "PASTE_YOUR_MAPBOX_TOKEN_HERE":
@@ -152,51 +152,72 @@ df = pd.read_csv(input_path)
 
 print(f"\nLoaded {len(df)} restaurants from: {input_path}")
 
+# Check if we already have geocoded data
+geocoded_path = os.path.join("data", "lenzieswholunchanddinner_geocoded.csv")
+if os.path.exists(geocoded_path):
+    df_existing = pd.read_csv(geocoded_path)
+    if "Latitude" in df_existing.columns and "Longitude" in df_existing.columns:
+        # Check if there are any non-null coordinates
+        existing_geocoded = df_existing["Latitude"].notna().sum()
+        if existing_geocoded > 0:
+            print(f"Found existing geocoded file with {existing_geocoded} coordinates.")
+            print("Using existing coordinates instead of re-geocoding.")
+            df = df_existing
+            # Skip to map building
+            skip_geocoding = True
+        else:
+            skip_geocoding = False
+    else:
+        skip_geocoding = False
+else:
+    skip_geocoding = False
+
 
 # =============================================================================
-# STEP 5: GEOCODE EACH ADDRESS
+# STEP 5: GEOCODE EACH ADDRESS (OR SKIP IF ALREADY DONE)
 # =============================================================================
-print("\nGeocoding addresses using Mapbox API...")
-print("(This may take a minute — we pause briefly between each request\n"
-      " to avoid overwhelming the API server.)")
+if not skip_geocoding:
+    print("\nGeocoding addresses using Mapbox API...")
+    print("(This may take a minute — we pause briefly between each request\n"
+          " to avoid overwhelming the API server.)")
 
-# Create empty lists to store the coordinates we get back
-latitudes = []
-longitudes = []
+    # Create empty lists to store the coordinates we get back
+    latitudes = []
+    longitudes = []
 
-# Loop through each row in the DataFrame using iterrows().
-# 'i' is the row index (0, 1, 2...), 'row' is the row data.
-for i, row in df.iterrows():
+    # Loop through each row in the DataFrame using iterrows().
+    # 'i' is the row index (0, 1, 2...), 'row' is the row data.
+    for i, row in df.iterrows():
 
-    # Build the full address string for geocoding.
-    # We combine the address fields for the best possible result.
-    address = row.get("Address", "")
+        # Build the full address string for geocoding.
+        # We combine the address fields for the best possible result.
+        address = row.get("Address", "")
 
-    # Show progress so students can see the script is working
-    name = row.get("Name", f"Row {i}")
-    print(f"  [{i+1}/{len(df)}] Geocoding: {name[:40]}...")
+        # Show progress so students can see the script is working
+        name = row.get("Name", f"Row {i}")
+        print(f"  [{i+1}/{len(df)}] Geocoding: {name[:40]}...")
 
-    # Call our geocoding function
-    lat, lon = geocode_address(address, MAPBOX_TOKEN)
+        # Call our geocoding function
+        lat, lon = geocode_address(address, MAPBOX_TOKEN)
 
-    # Append the result to our lists
-    latitudes.append(lat)
-    longitudes.append(lon)
+        # Append the result to our lists
+        latitudes.append(lat)
+        longitudes.append(lon)
 
-    # time.sleep() pauses execution for 0.1 seconds between requests.
-    # This is called "rate limiting" — it's considerate to API servers
-    # and prevents your account from being flagged for excessive requests.
-    time.sleep(0.1)
+        # time.sleep() pauses execution for 0.1 seconds between requests.
+        # This is called "rate limiting" — it's considerate to API servers
+        # and prevents your account from being flagged for excessive requests.
+        time.sleep(0.1)
 
-# Add the latitude and longitude as new columns in our DataFrame
-df["Latitude"] = latitudes
-df["Longitude"] = longitudes
+    # Add the latitude and longitude as new columns in our DataFrame
+    df["Latitude"] = latitudes
+    df["Longitude"] = longitudes
 
-# Count how many addresses were successfully geocoded
-geocoded_count = df["Latitude"].notna().sum()
-print(f"\nSuccessfully geocoded: {geocoded_count} out of {len(df)} restaurants")
-print(f"Could not geocode:      {len(df) - geocoded_count} restaurants")
-print("  (PO Boxes, missing addresses, and very rural locations may not geocode)")
+    # Count how many addresses were successfully geocoded
+    geocoded_count = df["Latitude"].notna().sum()
+    print(f"\nSuccessfully geocoded: {geocoded_count} out of {len(df)} restaurants")
+    print(f"Could not geocode:      {len(df) - geocoded_count} restaurants")
+    print("  (PO Boxes, missing addresses, and very rural locations may not geocode)")
 
 
 # =============================================================================
@@ -224,8 +245,14 @@ print(f"  Placing {len(df_mapped)} markers on the map.")
 # --- Calculate the Map Center ---
 # We center the map on the average lat/lon of all our mapped restaurants.
 # This ensures the map opens centered on your data.
-center_lat = df_mapped["Latitude"].mean()
-center_lon = df_mapped["Longitude"].mean()
+if len(df_mapped) > 0:
+    center_lat = df_mapped["Latitude"].mean()
+    center_lon = df_mapped["Longitude"].mean()
+else:
+    # Default to South Bay area if no coordinates
+    print("  Warning: No geocoded addresses found. Using default South Bay center.")
+    center_lat = 33.8688
+    center_lon = -118.3940
 
 # --- Create the Folium Map Object ---
 # folium.Map() creates a new blank map.
@@ -309,18 +336,153 @@ folium.LayerControl().add_to(napa_map)
 
 
 # =============================================================================
-# STEP 8: SAVE THE MAP AS AN HTML FILE
+# STEP 8: SAVE THE MAP AS AN HTML FILE WITH PORTFOLIO STYLING
 # =============================================================================
-map_output_path = os.path.join("data", "lenzieswholunchanddinner.html")
+# First save the standalone map
+standalone_map_path = os.path.join("data", "lenzieswholunchanddinner_map.html")
+napa_map.save(standalone_map_path)
 
-# .save() writes the map to an HTML file
-napa_map.save(map_output_path)
+# Now create the integrated portfolio page
+lab06_path = "lab06.html"
 
-print(f"  Map saved to: {map_output_path}")
+# Get the map HTML as a string
+map_html = napa_map.get_root().render()
+
+# Extract just the map div and script from the Folium output
+# We'll embed this in our portfolio template
+import re
+map_div_match = re.search(r'(<div class="folium-map".*?</div>)', map_html, re.DOTALL)
+map_script_match = re.search(r'(<script>.*?</script>)\s*</html>', map_html, re.DOTALL)
+
+map_div = map_div_match.group(1) if map_div_match else ""
+map_script = map_script_match.group(1) if map_script_match else ""
+
+# Get all the CSS and JS dependencies from the head
+head_match = re.search(r'<head>(.*?)</head>', map_html, re.DOTALL)
+head_content = head_match.group(1) if head_match else ""
+
+# Extract just the Leaflet/Folium specific styles and scripts
+leaflet_css = re.findall(r'<link.*?leaflet.*?/?>', head_content, re.IGNORECASE)
+leaflet_scripts = re.findall(r'<script.*?leaflet.*?</script>', head_content, re.IGNORECASE | re.DOTALL)
+folium_styles = re.findall(r'<style[^>]*>.*?</style>', head_content, re.DOTALL)
+
+# Create the integrated HTML with portfolio styling
+integrated_html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lenzie Who Lunches and Dinners | Stella Lenzie</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Leaflet CSS -->
+    {''.join(leaflet_css)}
+    
+    <!-- Additional Bootstrap/FontAwesome for markers -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    
+    <!-- Folium Map Styles -->
+    {''.join(folium_styles)}
+    
+    <style>
+        /* Map container styling */
+        .map-container {{
+            width: 100%;
+            height: 600px;
+            margin: 2rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }}
+        
+        .map-container .folium-map {{
+            width: 100%;
+            height: 100%;
+        }}
+        
+        @media (max-width: 768px) {{
+            .map-container {{
+                height: 400px;
+            }}
+        }}
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">AI Evaluation</a></li>
+            <li><a href="lab03.html">Tufte Critique</a></li>
+            <li><a href="lab04.html">Tableau Visualization</a></li>
+            <li><a href="lab05.html">Vibe Coding</a></li>
+            <li><a href="lab06.html" class="active">Lenzie Who Lunches and Dinners</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Lenzie Who Lunches and Dinners</h1>
+        <p>A Comprehensive Guide to South Bay Dining</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>Welcome to my personal guide to the best restaurants in the South Bay! This interactive map showcases my favorite dining spots, from casual diners to upscale steakhouses. Each location has been carefully selected based on personal experience and includes detailed recommendations.</p>
+            <p>Click on any marker to see information about the restaurant, including cuisine type, dress code, my personal recommendations, and a link to their website. The map uses OpenStreetMap as its base layer for easy navigation.</p>
+        </section>
+
+        <section>
+            <h2>Interactive Restaurant Map</h2>
+            <p>Explore {len(df_mapped)} of my favorite South Bay restaurants below. Click on the red markers to learn more about each location!</p>
+            
+            <div class="map-container">
+                {map_div}
+            </div>
+        </section>
+
+        <section>
+            <h2>About This Project</h2>
+            <p>This map was created using Python, pandas for data processing, the Mapbox Geocoding API to convert addresses to coordinates, and Folium to generate the interactive map visualization. All restaurant data, descriptions, and recommendations are based on my personal dining experiences in the South Bay area.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Stella Lenzie | <a href="https://github.com/sllenzie/DCDA40833-portfolio">GitHub</a></p>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">↑</button>
+
+    <!-- Leaflet JavaScript -->
+    {''.join(leaflet_scripts)}
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Map Initialization Script -->
+    {map_script}
+    
+    <!-- Portfolio Navigation Scripts -->
+    <script src="js/menu.js"></script>
+    <script src="js/back-to-top.js"></script>
+</body>
+</html>'''
+
+# Write the integrated HTML file
+with open(lab06_path, 'w', encoding='utf-8') as f:
+    f.write(integrated_html)
+
+print(f"  Standalone map saved to: {standalone_map_path}")
+print(f"  Integrated portfolio page saved to: {lab06_path}")
 print("\n" + "=" * 60)
 print("  SCRIPT COMPLETE!")
 print("=" * 60)
 print(f"\nTo view your map:")
-print(f"  1. In VS Code, right-click on: {map_output_path}")
-print(f"  2. Select 'Open with Live Server' (if installed)")
-print(f"  3. OR open the file directly in your web browser")
+print(f"  1. Open {lab06_path} in your browser")
+print(f"  2. The map is now integrated with your portfolio styling!")
+print(f"  3. Navigate using your portfolio menu")

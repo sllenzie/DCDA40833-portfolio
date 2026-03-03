@@ -1,165 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenzie Who Lunches and Dinners | Stella Lenzie</title>
     
-    <!-- Portfolio CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Leaflet CSS (no Bootstrap - it conflicts with portfolio styles) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
-    
-    <style>
-        /* Map container styling */
-        .map-container {
-            width: 100%;
-            height: 600px;
-            margin: 2rem 0;
-            border: 2px solid var(--primary-color, #791960);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        #map_189e6bca57f3f4ccd0c5ffd60ce7c9b9 {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-        
-        .leaflet-container { 
-            font-size: 1rem;
-            font-family: inherit;
-        }
-        
-        .leaflet-popup-content {
-            font-size: 13px;
-        }
-        
-        /* Ensure proper tile rendering */
-        .leaflet-tile-container {
-            opacity: 1;
-        }
-        
-        .leaflet-tile-pane {
-            z-index: 1;
-        }
-        
-        .leaflet-tile {
-            border: none;
-        }
-        
-        .leaflet-container {
-            background: #f0f0f0 !important;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .map-container {
-                height: 400px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="lab02.html">AI Evaluation</a></li>
-            <li><a href="lab03.html">Tufte Critique</a></li>
-            <li><a href="lab04.html">Tableau Visualization</a></li>
-            <li><a href="lab05.html">Vibe Coding</a></li>
-            <li><a href="lab06.html" class="active">Lenzie Who Lunches and Dinners</a></li>
-        </ul>
-    </nav>
-    
-    <header>
-        <h1>Lenzie Who Lunches and Dinners</h1>
-    </header>
-
-    <main>
-        <section>
-            <h2>Introduction</h2>
-            <p>Welcome to "Lenzie Who Lunches and Dinners," a curated guide showcasing 60 of my favorite restaurants across the South Bay and Greater Los Angeles area. This interactive map combines my personal dining experiences with modern web mapping technology to help you discover exceptional local cuisine.</p>
-            
-            <p>Whether you're looking for a casual breakfast spot, an upscale steakhouse, or the perfect place for a night out with friends, this guide has something for everyone. Each marker on the map represents a restaurant I've personally visited and recommend, complete with detailed descriptions, cuisine types, attire suggestions, and direct links to their websites.</p>
-        </section>
-
-        <section>
-            <h2>How to Use This Map</h2>
-            <p>The map below features all 60 restaurants plotted with custom styling using Mapbox. Click on any burgundy circle marker to see detailed information about each restaurant, including:</p>
-            <ul>
-                <li><strong>Name & Image:</strong> See what the restaurant looks like</li>
-                <li><strong>Address:</strong> Exact location with clickable Google Images</li>
-                <li><strong>Cuisine Type:</strong> From Chinese to French to Old-School Steakhouses</li>
-                <li><strong>Attire Suggestions:</strong> Know what to wear before you go</li>
-                <li><strong>Personal Description:</strong> My honest take on what to order and what to skip</li>
-                <li><strong>Website:</strong> Direct links to make reservations or view menus</li>
-            </ul>
-            <p>Use the map controls to zoom in and explore specific neighborhoods, or click markers to browse through different options. The restaurants span from Malibu to Long Beach, with heavy concentration in Manhattan Beach, Redondo Beach, Hermosa Beach, and Palos Verdes.</p>
-        </section>
-
-        <section>
-            <h2>Interactive Restaurant Map</h2>
-            <div class="map-container">
-                <div class="folium-map" id="map_189e6bca57f3f4ccd0c5ffd60ce7c9b9"></div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Technical Implementation</h2>
-            <p>This project showcases the integration of multiple technologies:</p>
-            <ul>
-                <li><strong>Python & Pandas:</strong> Data processing and CSV manipulation of restaurant information</li>
-                <li><strong>Folium:</strong> Python library for creating interactive Leaflet maps</li>
-                <li><strong>Mapbox:</strong> Custom map styling using my personal Mapbox style (mapbox://styles/sllenzie/cmm3t4ib900di01s520v04rtn)</li>
-                <li><strong>Leaflet.js:</strong> JavaScript mapping library powering the interactive features</li>
-                <li><strong>Coordinate Extraction:</strong> Automated extraction of 60 restaurant coordinates from existing map data</li>
-                <li><strong>Portfolio Integration:</strong> Seamlessly embedded within my existing portfolio structure with responsive design</li>
-            </ul>
-            <p>The custom Mapbox style provides a cohesive visual identity with burgundy (#8B0000) and crimson (#C41E3A) markers that complement the portfolio's color scheme.</p>
-        </section>
-
-        <section>
-            <h2>About the Data</h2>
-            <p>All 60 restaurants were personally selected based on memorable dining experiences throughout my time in Southern California. The data includes comprehensive information: restaurant names, full addresses, cuisine categories, recommended attire, detailed personal reviews, official website links, and high-quality Google Images photos.</p>
-            
-            <p>From the casual comfort of Steve's Diner in Torrance to the elegant ambiance of  Mar'Sel at Terranea, this collection represents diverse dining experiences across different price points, cuisines, and atmospheres. Each entry reflects my genuine recommendations and honest opinions about menu items, atmosphere, and overall experience.</p>
-        </section>
-
-        <section>
-            <h2>Explore & Enjoy</h2>
-            <p>Whether you're a longtime South Bay resident or just visiting the area, I hope this interactive guide helps you discover new favorite spots or inspires you to try something different. Happy dining!</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 Stella Lenzie | <a href="https://github.com/sllenzie/DCDA40833-portfolio">GitHub</a></p>
-    </footer>
-    
-    <!-- Back to Top Button -->
-    <button class="back-to-top" aria-label="Back to top">↑</button>
-    
-    <!-- Leaflet JavaScript (no Bootstrap JS - not needed) -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
     
-    <script>
-        L_NO_TOUCH = false;
-        L_DISABLE_3D = false;
-    </script>
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_189e6bca57f3f4ccd0c5ffd60ce7c9b9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
     
-    <!-- Map JavaScript -->
-    <script>
-var map_189e6bca57f3f4ccd0c5ffd60ce7c9b9 = L.map(
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+     z-index: 1000; background-color: rgba(255,255,255,0.9); padding: 10px 20px;
+     border: 2px solid #8B0000; border-radius: 8px; font-family: Georgia, serif;
+     font-size: 16px; font-weight: bold; color: #8B0000; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
+     🍽️ Lenzie Who Lunches and Dinners — Custom Style
+</div>
+    
+            <div class="folium-map" id="map_189e6bca57f3f4ccd0c5ffd60ce7c9b9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_189e6bca57f3f4ccd0c5ffd60ce7c9b9 = L.map(
                 "map_189e6bca57f3f4ccd0c5ffd60ce7c9b9",
                 {
                     center: [33.86437468333333, -118.36281555000001],
@@ -178,7 +86,7 @@ var map_189e6bca57f3f4ccd0c5ffd60ce7c9b9 = L.map(
         
     
             var tile_layer_0cd6bec0df39a7368315e58aba819529 = L.tileLayer(
-                "https://api.mapbox.com/styles/v1/sllenzie/cmm3t4ib900di01s520v04rtn/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2xsZW56aWUiLCJhIjoiY21tYXc5YXFlMGpwdDJ3b2ltaTU4dHIxaCJ9.yAsfpMXpkTRiH-Gvn0-J-g",
+                "https://api.mapbox.com/styles/v1/sllenzie/cmm3t4ib900di01s520v04rtn/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic2xsZW56aWUiLCJhIjoiY21tYXc5YXFlMGpwdDJ3b2ltaTU4dHIxaCJ9.yAsfpMXpkTRiH-Gvn0-J-g",
                 {
   "minZoom": 0,
   "maxZoom": 18,
@@ -2179,7 +2087,7 @@ var map_189e6bca57f3f4ccd0c5ffd60ce7c9b9 = L.map(
     
             var layer_control_f49418b852f2cf4acfc966f565f3d324_layers = {
                 base_layers : {
-                    "https://api.mapbox.com/styles/v1/sllenzie/cmm3t4ib900di01s520v04rtn/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoic2xsZW56aWUiLCJhIjoiY21tYXc5YXFlMGpwdDJ3b2ltaTU4dHIxaCJ9.yAsfpMXpkTRiH-Gvn0-J-g" : tile_layer_0cd6bec0df39a7368315e58aba819529,
+                    "https://api.mapbox.com/styles/v1/sllenzie/cmm3t4ib900di01s520v04rtn/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyj1ijoic2xszw56awuilcjhijoiy21tyxc5yxflmgpwddj3b2ltatu4dhixacj9.yasfpmxpktrih-gvn0-j-g" : tile_layer_0cd6bec0df39a7368315e58aba819529,
                 },
                 overlays :  {
                 },
@@ -2193,10 +2101,7 @@ var map_189e6bca57f3f4ccd0c5ffd60ce7c9b9 = L.map(
   "autoZIndex": true,
 }
             ).addTo(map_189e6bca57f3f4ccd0c5ffd60ce7c9b9);
-    </script>
-    
-    <!-- Portfolio JavaScript -->
-    <script src="js/menu.js"></script>
-    <script src="js/back-to-top.js"></script>
-</body>
+
+        
+</script>
 </html>
