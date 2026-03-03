@@ -3,9 +3,2133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 06: Lenzie Who Lunches and Dinners</title>
+    <title>Lenzie Who Lunches and Dinners | Stella Lenzie</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lab02.html">AI Evaluation</a></li>
+            <li><a href="lab03.html">Tufte Critique</a></li>
+            <li><a href="lab04.html">Tableau Visualization</a></li>
+            <li><a href="lab05.html">Vibe Coding</a></li>
+            <li><a href="lab06.html" class="active">Lenzie Who Lunches and Dinners</a></li>
+        </ul>
+    </nav>
+    
+    <header>
+        <h1>Lenzie Who Lunches and Dinners: A Comprehensive Guide to South Bay Dining</h1>
+    </header>
+
+
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_330059a3e7ef3d897bf8ec0e009a95e5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
 </head>
 <body>
     
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+     z-index: 1000; background-color: white; padding: 10px 20px;
+     border: 2px solid #8B0000; border-radius: 8px; font-family: Georgia, serif;
+     font-size: 16px; font-weight: bold; color: #8B0000; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
+    Lenzie Who Lunches and Dinners
+</div>
+    
+            <div class="folium-map" id="map_330059a3e7ef3d897bf8ec0e009a95e5" ></div>
+        
 </body>
+<script>
+    
+    
+            var map_330059a3e7ef3d897bf8ec0e009a95e5 = L.map(
+                "map_330059a3e7ef3d897bf8ec0e009a95e5",
+                {
+                    center: [33.86437468333333, -118.36281555000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e5bf4b381fb9e236350a9c5e4c5c6f14 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e5bf4b381fb9e236350a9c5e4c5c6f14.addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+            var circle_marker_205c38551ed8e6d081c0fa09a901a942 = L.circleMarker(
+                [33.83196, -118.328367],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_ad08ff5b981b4a94a90b294bd2042fe8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d3da3c6a00e622452308dce9a345fd7 = $(`<div id="html_8d3da3c6a00e622452308dce9a345fd7" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Steve's         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepEQq1oh8RyLwCN9pT4ddg5uFsw7oMYKNmSC3NElOgX2OAenOilGuep8AgjkQUCIaZhdeGTwbg8SUjCJXS5k9svYd6RNTS5wswKzo4ajm8OwQlRuDKG5JwWOlMLyZFV5oY9XfG7qyEd2tU5=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Steve's">         <b>📍 Address:</b><br>         1632 Crenshaw Blvd, Torrance, CA 90501<br><br>         <b>🍽️ Cuisine:</b> Diner<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Casual diner that has the BEST Club Sandwich and Fried Zuchinni. Would also recommend the French Toast Platter. Crispy Diet Coke.         </div>         <br><br><b>🌐 Website:</b> <a href="https://order.online/store/25390339?pickup=true&redirected=true" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_ad08ff5b981b4a94a90b294bd2042fe8.setContent(html_8d3da3c6a00e622452308dce9a345fd7);
+            
+        
+
+        circle_marker_205c38551ed8e6d081c0fa09a901a942.bindPopup(popup_ad08ff5b981b4a94a90b294bd2042fe8)
+        ;
+
+        
+    
+    
+            circle_marker_205c38551ed8e6d081c0fa09a901a942.bindTooltip(
+                `<div>
+                     Steve's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b5ada5a16300bf26e94a167f5220728 = L.circleMarker(
+                [33.833764, -118.350665],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_621264c1d3c65e0a44be70c16af401eb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_28006ffe11812987c83c4c2e569c3dd0 = $(`<div id="html_28006ffe11812987c83c4c2e569c3dd0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Din Tai Fung         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepfIAvbR_nZsi5Jg5CE3Rl9k6QJdioyIRST2DW19tZZ3NaMlXfzePC_ZZz4A7ouFTX48elgjMT6sJL6WTvOuPTpTUX_XJmzuXgs8B_a_FPMwIdFclKz__uE9Lu018V5aeUH0QkLD__V0DKV=w243-h174-n-k-no-nu" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Din Tai Fung">         <b>📍 Address:</b><br>         21540 Hawthorne Blvd, Torrance, CA 90503<br><br>         <b>🍽️ Cuisine:</b> Chinese<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Shangnai Chinese cuisine with a great atmosphere. Pork XLB, Spicy Wontons, Shanghai Rice Cakes with Chicken, skip the Short Ribs but go for the Spicy Peanut Noodles and the Green Beans. Crispy Diet Coke!         </div>         <br><br><b>🌐 Website:</b> <a href="https://dtf.com/en-us" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_621264c1d3c65e0a44be70c16af401eb.setContent(html_28006ffe11812987c83c4c2e569c3dd0);
+            
+        
+
+        circle_marker_7b5ada5a16300bf26e94a167f5220728.bindPopup(popup_621264c1d3c65e0a44be70c16af401eb)
+        ;
+
+        
+    
+    
+            circle_marker_7b5ada5a16300bf26e94a167f5220728.bindTooltip(
+                `<div>
+                     Din Tai Fung
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a0a4abd33eebbfdc66895e0f7b41c92 = L.circleMarker(
+                [33.805674, -118.353317],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_c5e47a32aba37c0abd5f21e41df23775 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f50d516967f209a30abac3c893550fe0 = $(`<div id="html_f50d516967f209a30abac3c893550fe0" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             El Burrito Junior         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoxwOjPmWq6AM77ytIWo0FNFc2q6hRD0nVeOXYKl1hSU5_aakfJ5aSpui52DJKJFF-Vvi4g-dnK02Gkcadvp1fR0-yXHcM3f11EXD_Fs-Mifs_NLK6vSenqtHpirE8Z5heyDb0j=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="El Burrito Junior">         <b>📍 Address:</b><br>         3830 Pacific Coast Hwy, Torrance, CA 90505<br><br>         <b>🍽️ Cuisine:</b> Mexican<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Yes, it's a chain, but this is the location is the best. Breakfast is superior here, but go past ~9am in order for the beans to be the best. No Diet Coke.         </div>         <br><br><b>🌐 Website:</b> <a href="https://el-burrito-jr.menu-world.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_c5e47a32aba37c0abd5f21e41df23775.setContent(html_f50d516967f209a30abac3c893550fe0);
+            
+        
+
+        circle_marker_6a0a4abd33eebbfdc66895e0f7b41c92.bindPopup(popup_c5e47a32aba37c0abd5f21e41df23775)
+        ;
+
+        
+    
+    
+            circle_marker_6a0a4abd33eebbfdc66895e0f7b41c92.bindTooltip(
+                `<div>
+                     El Burrito Junior
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fea2ce0766b304172b799a80f8f88211 = L.circleMarker(
+                [33.819528, -118.385666],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_c34a2ee4505e0978e3baf68b2537f772 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8ac32160bcb0bbc00d2bac6f232e405e = $(`<div id="html_8ac32160bcb0bbc00d2bac6f232e405e" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Riviera Mexican         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipMz-wwO_N2M6XjaueZcnX37vXMEaq-ZEfsdctEP=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Riviera Mexican">         <b>📍 Address:</b><br>         1615 S Pacific Coast Hwy, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Mexican<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Thin chips, delicious salsa. Baja Fish Tacos are AMAZING and so are their Fajitas.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.therivmex.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_c34a2ee4505e0978e3baf68b2537f772.setContent(html_8ac32160bcb0bbc00d2bac6f232e405e);
+            
+        
+
+        circle_marker_fea2ce0766b304172b799a80f8f88211.bindPopup(popup_c34a2ee4505e0978e3baf68b2537f772)
+        ;
+
+        
+    
+    
+            circle_marker_fea2ce0766b304172b799a80f8f88211.bindTooltip(
+                `<div>
+                     Riviera Mexican
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cc543690cddf6b5dda306cb817d580e8 = L.circleMarker(
+                [33.818, -118.38162],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_faa47b81c66d2240ee4da8960ccbf5d9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a172bfc5c8f40e35490977eca806f227 = $(`<div id="html_a172bfc5c8f40e35490977eca806f227" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Original Pancake House         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoByJclyLYBdA48yDVRBLTcwdreZGc6j4O6qVLSxwpEeqge0AKLgKp0vdJY1axg49lnKHHsOrKPJPrxTL9nSOYitwIZswvskTZFNX76MPs6fRr8Ml9hFup-C8qfkxmLE8Uvfyl7A3K6m8sQ=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Original Pancake House">         <b>📍 Address:</b><br>         1756 S Pacific Coast Hwy, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Breakfast<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Best location I've evber been to. For parties of two- split the Ham and Cheese Omlette with a cheddar-jack mix and an extra side of pancakes. Be aware of long lines on the weekends. No reservations, waitlist only. Diet Coke in a can.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.ophredondobeach.com/mobile/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_faa47b81c66d2240ee4da8960ccbf5d9.setContent(html_a172bfc5c8f40e35490977eca806f227);
+            
+        
+
+        circle_marker_cc543690cddf6b5dda306cb817d580e8.bindPopup(popup_faa47b81c66d2240ee4da8960ccbf5d9)
+        ;
+
+        
+    
+    
+            circle_marker_cc543690cddf6b5dda306cb817d580e8.bindTooltip(
+                `<div>
+                     Original Pancake House
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bfaaaf6b8d23a3b49e14e52548a01ffc = L.circleMarker(
+                [33.821821, -118.329433],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_1c5360258f35ca084c66fb84b3d379eb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e6f7981d6df3a069fae1397759e8e1b = $(`<div id="html_2e6f7981d6df3a069fae1397759e8e1b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             The San Franciscan         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoKryYPpE45-C41Lj84fosOu37KZnUUIKp8bFvoKtuvfO-DQbv3ANau5ltHKP-IcdciPHJzRqR7L5VcdkuZDsWottVIp3I9-6G-dV-P6FTkJImaHYQdrSIY6GjfFboqqlOz85pPE5p6HTvA=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="The San Franciscan">         <b>📍 Address:</b><br>         2520 Sepulveda Blvd, Torrance, CA 90505<br><br>         <b>🍽️ Cuisine:</b> Old-School Stealhouse<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         A South Bay staple. Pork Chop is tasty, but it's more about the vibes. If you go on the right days, there's a live band and it really feels like you've stepped into the 1970s. Cosmo martinis are spectacular, but take an Uber.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.the-sanfranciscan.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_1c5360258f35ca084c66fb84b3d379eb.setContent(html_2e6f7981d6df3a069fae1397759e8e1b);
+            
+        
+
+        circle_marker_bfaaaf6b8d23a3b49e14e52548a01ffc.bindPopup(popup_1c5360258f35ca084c66fb84b3d379eb)
+        ;
+
+        
+    
+    
+            circle_marker_bfaaaf6b8d23a3b49e14e52548a01ffc.bindTooltip(
+                `<div>
+                     The San Franciscan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_29fc6a389fe6465af7c260131c825750 = L.circleMarker(
+                [33.883847, -118.410441],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_4bb6ff26ef27144fe7140dd1f540b9d4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0ae5711c8a3101c00c56cdb31ca36d46 = $(`<div id="html_0ae5711c8a3101c00c56cdb31ca36d46" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Fete Bistro by Slay         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipP3DUogjLcSLuQvScLUbSZGbB5Mq5xCCJCx-LZa=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Fete Bistro by Slay">         <b>📍 Address:</b><br>         1017 Manhattan Ave, Manhattan Beach, CA 90266<br><br>         <b>🍽️ Cuisine:</b> French<br><br>         <b>👔 Attire:</b> Chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Steak frites are fresh and crispy, Moules en Frites are a must-order. Great selection of French wine, and craft cocktails were very well-made.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.fetebyslay.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_4bb6ff26ef27144fe7140dd1f540b9d4.setContent(html_0ae5711c8a3101c00c56cdb31ca36d46);
+            
+        
+
+        circle_marker_29fc6a389fe6465af7c260131c825750.bindPopup(popup_4bb6ff26ef27144fe7140dd1f540b9d4)
+        ;
+
+        
+    
+    
+            circle_marker_29fc6a389fe6465af7c260131c825750.bindTooltip(
+                `<div>
+                     Fete Bistro by Slay
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3038288eaddaba671fd2ffa91fcc8f3 = L.circleMarker(
+                [33.883847, -118.410441],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_7c7a805ad736a2e758674b1904695ec6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8434b4c3da9a07f704d67eadbb5b9259 = $(`<div id="html_8434b4c3da9a07f704d67eadbb5b9259" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             X Speakeasy         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepw0aq9fqzXzlM6QjKtH0b9TfWyQ92v6I0q9FQlLASdVQugnQ0T-7kuua7MJVq_MRmijJu4Ng_WkRzZTiJuJ4D1SfeiNWSc9o_CXwGWnm3W6R1vjwilEHMkzhzDWUelNKjiFEqhS4g30eA=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="X Speakeasy">         <b>📍 Address:</b><br>         1017 Manhattan Ave, Manhattan Beach, CA 90266<br><br>         <b>🍽️ Cuisine:</b> Bar<br><br>         <b>👔 Attire:</b> Chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Great place for a drink after dinner. On a Thursday, it'll be a little empty but all the better to actually talk to the people you're with.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.xspeakeasy.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_7c7a805ad736a2e758674b1904695ec6.setContent(html_8434b4c3da9a07f704d67eadbb5b9259);
+            
+        
+
+        circle_marker_a3038288eaddaba671fd2ffa91fcc8f3.bindPopup(popup_7c7a805ad736a2e758674b1904695ec6)
+        ;
+
+        
+    
+    
+            circle_marker_a3038288eaddaba671fd2ffa91fcc8f3.bindTooltip(
+                `<div>
+                     X Speakeasy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68a517c3e0b3d80b4d5cb56e8e10273f = L.circleMarker(
+                [34.10173, -118.335372],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_8a237cacae391482c9f4a31d480f390c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a8a769b08bc429b60c0057a5c583b342 = $(`<div id="html_a8a769b08bc429b60c0057a5c583b342" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Musso and Frank's         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqDC5076Ux4WiS7sL2bgnw8a-fBzFGGmMzp7SdSbvnnVZLZpusqLfo5FwvxMInVJrrL_MDiStsudnHWOMOX3Ff56q90bh92QuvKtp1uS3C_IQm7ueaaHB1EZNseuNFQi9qIlkl0=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Musso and Frank's">         <b>📍 Address:</b><br>         6667 Hollywood Blvd, Hollywood, CA 90028<br><br>         <b>🍽️ Cuisine:</b> Old-School Steakhouse<br><br>         <b>👔 Attire:</b> Very chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         A Hollywood institution for a reason. Waiters still wear bow-ties and will tell you whose booth you're sitting at when you get sat. I don't even care if they were telling the truth or not. Go on a Thursday for the Chicken Pot Pie or a Saturday for a can't-miss Short Rib. Lamb is also incredible. Surprisingly, so is the Rigatoni with Lamb Ragut. Take an Uber- cocktails are strong and wine is too good to put down.         </div>         <br><br><b>🌐 Website:</b> <a href="https://mussoandfrank.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_8a237cacae391482c9f4a31d480f390c.setContent(html_a8a769b08bc429b60c0057a5c583b342);
+            
+        
+
+        circle_marker_68a517c3e0b3d80b4d5cb56e8e10273f.bindPopup(popup_8a237cacae391482c9f4a31d480f390c)
+        ;
+
+        
+    
+    
+            circle_marker_68a517c3e0b3d80b4d5cb56e8e10273f.bindTooltip(
+                `<div>
+                     Musso and Frank's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9234f00e2161461902cdd12f7b8f4a23 = L.circleMarker(
+                [33.86185, -118.400624],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_c83879657b7792dbbd91c9d6ad284aad = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_91a8616a9e3a635bad7df3922c177167 = $(`<div id="html_91a8616a9e3a635bad7df3922c177167" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Baja Sharkeez         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipNTRcgp62YLpPa6tjFWtwJuOeWuUrdMR4fu1-2g=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Baja Sharkeez">         <b>📍 Address:</b><br>         52 Pier Ave, Hermosa Beach, CA 90254<br><br>         <b>🍽️ Cuisine:</b> Bar<br><br>         <b>👔 Attire:</b> Jeans and a going out top<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         I've never eaten the food here, but I can say with absolute certainty this is a spot for the >30 crowd. Go with a friend and get the Shark Attack and you can repurpose the bucket as a flower vase.         </div>         <br><br><b>🌐 Website:</b> <a href="https://sharkeez.net/hermosa-beach/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_c83879657b7792dbbd91c9d6ad284aad.setContent(html_91a8616a9e3a635bad7df3922c177167);
+            
+        
+
+        circle_marker_9234f00e2161461902cdd12f7b8f4a23.bindPopup(popup_c83879657b7792dbbd91c9d6ad284aad)
+        ;
+
+        
+    
+    
+            circle_marker_9234f00e2161461902cdd12f7b8f4a23.bindTooltip(
+                `<div>
+                     Baja Sharkeez
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1fa8cf5e17d4f40ff2e67747dfb4a040 = L.circleMarker(
+                [33.884741, -118.411352],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_a5a213a7f34915d0a4f50f71599ddfd1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fabc8180338df885691c8763ec903425 = $(`<div id="html_fabc8180338df885691c8763ec903425" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             The Strand House         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipMXfvGB_lMxi-2V4GqkVJtULNJZzHmgyqBvJGL-=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="The Strand House">         <b>📍 Address:</b><br>         117 Manhattan Beach Blvd, Manhattan Beach, CA 90266<br><br>         <b>🍽️ Cuisine:</b> Upscale New American<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Citrus Ahi Tuna Salad, Fiedo di Mare, Double Cut Lamb Chops, Parker House Rolls. You won't have room for dessert, but order the Glazed Donuts anyway. One bite won't kill you, but the regret of not having them might.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.thestrandhousemb.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_a5a213a7f34915d0a4f50f71599ddfd1.setContent(html_fabc8180338df885691c8763ec903425);
+            
+        
+
+        circle_marker_1fa8cf5e17d4f40ff2e67747dfb4a040.bindPopup(popup_a5a213a7f34915d0a4f50f71599ddfd1)
+        ;
+
+        
+    
+    
+            circle_marker_1fa8cf5e17d4f40ff2e67747dfb4a040.bindTooltip(
+                `<div>
+                     The Strand House
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c61358df9d2bc3c49e2aaa6bd0be6a9b = L.circleMarker(
+                [34.018786, -118.501117],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_a6c921ebb8be4f8b0ef5317df75290d3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_16ba70e6371cf384fca8cebcc297f96c = $(`<div id="html_16ba70e6371cf384fca8cebcc297f96c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             The Penthouse         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipPRDeBWA9zlidyarX46s2rW6xINzpOd7b_N0c3l=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="The Penthouse">         <b>📍 Address:</b><br>         1111 2nd St, Santa Monica, CA 90403<br><br>         <b>🍽️ Cuisine:</b> New American Beachy<br><br>         <b>👔 Attire:</b> Chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Tuna crispy rice is perfect for an appetizer, but it might only be available for lunch. During a clear day, you can see the whole beach and the water is gorgeous, and at night the skyline is incredibly gorgeous. Duck L'Orange is beautifully presented, have an espresso martini for dessert instead of the souflee- I've been tricked before.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.penthouserestaurant.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_a6c921ebb8be4f8b0ef5317df75290d3.setContent(html_16ba70e6371cf384fca8cebcc297f96c);
+            
+        
+
+        circle_marker_c61358df9d2bc3c49e2aaa6bd0be6a9b.bindPopup(popup_a6c921ebb8be4f8b0ef5317df75290d3)
+        ;
+
+        
+    
+    
+            circle_marker_c61358df9d2bc3c49e2aaa6bd0be6a9b.bindTooltip(
+                `<div>
+                     The Penthouse
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f05a6f325bd1b30f7dfa00ef3f276e5a = L.circleMarker(
+                [33.86227, -118.400964],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_494d5fd943bfa7e74364952cc8acffcd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9411446f7ecf55dba3cfb84d27c8a80c = $(`<div id="html_9411446f7ecf55dba3cfb84d27c8a80c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Tower 12         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipNMSbnRkCrFUaxBmAbTg8sOSWuOvh4SAXidJYB2=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Tower 12">         <b>📍 Address:</b><br>         53 Pier Ave, Hermosa Beach, CA 90254<br><br>         <b>🍽️ Cuisine:</b> Bar<br><br>         <b>👔 Attire:</b> Jeans and a going out top<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Never eaten here either, but this is the place that I run into everyone from highschool at. Every time, regardless of time of year. Something special about their Cosmo, but too many might have you asking, "Why didn't we date again?" to the people you really should not be asking that.          </div>         <br><br><b>🌐 Website:</b> <a href="https://tower12hb.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_494d5fd943bfa7e74364952cc8acffcd.setContent(html_9411446f7ecf55dba3cfb84d27c8a80c);
+            
+        
+
+        circle_marker_f05a6f325bd1b30f7dfa00ef3f276e5a.bindPopup(popup_494d5fd943bfa7e74364952cc8acffcd)
+        ;
+
+        
+    
+    
+            circle_marker_f05a6f325bd1b30f7dfa00ef3f276e5a.bindTooltip(
+                `<div>
+                     Tower 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d4179ecc69a4ebb0ac39e9aed103f89b = L.circleMarker(
+                [33.816958, -118.387077],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_2704a5713e7737629e632ff8c72cb074 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_538c443bcf8b8abd3f0a5f21cd609c1b = $(`<div id="html_538c443bcf8b8abd3f0a5f21cd609c1b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Redondo Beach Brewing Company         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipN5zxBYHenIA117SDb9pi_52cUUoRmIay85FQxe=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Redondo Beach Brewing Company">         <b>📍 Address:</b><br>         1814 S Catalina Ave, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Casual<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Great lunch spot, especially if it's warm enough to eat outside. Chinese chicken salad, tossed in the kitchen, with extra dressing on the side and a crispy Diet Coke and the sunshine helps make it the perfect place to have a pit stop while walking around the Riviera.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.redondobeachbrewco.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_2704a5713e7737629e632ff8c72cb074.setContent(html_538c443bcf8b8abd3f0a5f21cd609c1b);
+            
+        
+
+        circle_marker_d4179ecc69a4ebb0ac39e9aed103f89b.bindPopup(popup_2704a5713e7737629e632ff8c72cb074)
+        ;
+
+        
+    
+    
+            circle_marker_d4179ecc69a4ebb0ac39e9aed103f89b.bindTooltip(
+                `<div>
+                     Redondo Beach Brewing Company
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e53962c8aa36316a955be0ff1349ae12 = L.circleMarker(
+                [33.818024, -118.387854],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_0acdb2e960bce4a820a2dce8e49d2cda = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36e5f6321e65a15095c42fd9883c6369 = $(`<div id="html_36e5f6321e65a15095c42fd9883c6369" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Rebel Republic Social House         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipN51h0bh0H9n5iqKkipDkuvYJMMlMARf5TsdIUv=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Rebel Republic Social House">         <b>📍 Address:</b><br>         1710 S Catalina Ave, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Bar<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Never eaten at this spot either, but their seasonal cocktail menu is always fun and the most interesting people in Redondo tend to congregate here. Two drink max- otherwise the price on your tab might shock you.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.rebelrepublicsocialhouse.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_0acdb2e960bce4a820a2dce8e49d2cda.setContent(html_36e5f6321e65a15095c42fd9883c6369);
+            
+        
+
+        circle_marker_e53962c8aa36316a955be0ff1349ae12.bindPopup(popup_0acdb2e960bce4a820a2dce8e49d2cda)
+        ;
+
+        
+    
+    
+            circle_marker_e53962c8aa36316a955be0ff1349ae12.bindTooltip(
+                `<div>
+                     Rebel Republic Social House
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c9b5d976efc715b317c8e023b5bf1bf = L.circleMarker(
+                [33.818127, -118.387777],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_fef64e7b4049bd5950a900d945db7efb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3907ec23a58fd377ad10071e3e92c3a9 = $(`<div id="html_3907ec23a58fd377ad10071e3e92c3a9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Riviera House         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipM8LtElSWA7TvePli64EiYU4tEFH6Hti_BAM_0q=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Riviera House">         <b>📍 Address:</b><br>         1708 S Catalina Ave, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> New American Beachy<br><br>         <b>👔 Attire:</b> Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Start with a Scarlet Letter or a Killjoy, share the Poke Nachos or the Coconut Shrimp and try the Fish and Chips. No need for dessert here, or throw in a third app (Coconut Curry Mussels- yum!) and keep it light! Great patio space and beachfront vibes.          </div>         <br><br><b>🌐 Website:</b> <a href="https://rivierahouserb.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_fef64e7b4049bd5950a900d945db7efb.setContent(html_3907ec23a58fd377ad10071e3e92c3a9);
+            
+        
+
+        circle_marker_2c9b5d976efc715b317c8e023b5bf1bf.bindPopup(popup_fef64e7b4049bd5950a900d945db7efb)
+        ;
+
+        
+    
+    
+            circle_marker_2c9b5d976efc715b317c8e023b5bf1bf.bindTooltip(
+                `<div>
+                     Riviera House
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5678da0d2ca8bdba3013452eddccfa6e = L.circleMarker(
+                [33.818408, -118.388526],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_c8579db552173828b9c5318784c271e4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_724ba198829f55d6989415f680e1c876 = $(`<div id="html_724ba198829f55d6989415f680e1c876" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Rockefeller         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipO4zZk3LmNLClgKIPv2l3Jhn0ugB7gF91WaeYq5=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Rockefeller">         <b>📍 Address:</b><br>         1707 S Catalina Ave, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> New American Beachy<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         There's a reason The Obvious Choice is named that. A bright, fresh, subtly sweet cocktail starts the perfect background to some fabulous Ahi Wonton Nachos that are individually put together (this is important to me specifically so I'm including it). If you're there for lunch, the Healthy Steak Salad is light and refreshing, but for dinner he Crispy Chicken Sandwich is incredible with a side of the Truffle Fries. As far as their wine selection, I've gotta reccomend a glass of the Daou Sauvvy B with any of the above.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.eatrockefeller.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_c8579db552173828b9c5318784c271e4.setContent(html_724ba198829f55d6989415f680e1c876);
+            
+        
+
+        circle_marker_5678da0d2ca8bdba3013452eddccfa6e.bindPopup(popup_c8579db552173828b9c5318784c271e4)
+        ;
+
+        
+    
+    
+            circle_marker_5678da0d2ca8bdba3013452eddccfa6e.bindTooltip(
+                `<div>
+                     Rockefeller
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9fc425cbff3560a8092a31ce94a3105 = L.circleMarker(
+                [33.77241, -118.372902],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_b47bdae3ee8ea7068c307936b3ce6031 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4148b603196ceff66aa719d11fc33507 = $(`<div id="html_4148b603196ceff66aa719d11fc33507" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Good Stuff         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipPYRSaZL6eOObJgiQwOM4Y3ZErYpvFLddqBev1-=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Good Stuff">         <b>📍 Address:</b><br>         550 Deep Valley Dr #151, Rolling Hills Estates, CA 90274<br><br>         <b>🍽️ Cuisine:</b> Diner<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         A chain of diners around the South Bay, it just depends where you are in the area. This location is usually the least full, and there's a nice scenic drive up there. For breakfast, the California Quesadilla is great, and the Loco Moco is one of the best outside of Hawaii I've ever had. For lunch, the Chase's Fried Chicken wrap with Fries is INCREDIBLE and somehow magically gluten free if you're into that sort of thing.         </div>         <br><br><b>🌐 Website:</b> <a href="https://eatgoodstuff.com/palosverdes/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_b47bdae3ee8ea7068c307936b3ce6031.setContent(html_4148b603196ceff66aa719d11fc33507);
+            
+        
+
+        circle_marker_b9fc425cbff3560a8092a31ce94a3105.bindPopup(popup_b47bdae3ee8ea7068c307936b3ce6031)
+        ;
+
+        
+    
+    
+            circle_marker_b9fc425cbff3560a8092a31ce94a3105.bindTooltip(
+                `<div>
+                     Good Stuff
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_142ac60f5a3172632f216f1b27ef8fa8 = L.circleMarker(
+                [33.738501, -118.397998],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_0658693ba21176297a0e85a63dda2c93 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_591ed7d01fd5c46acbb4106780916bfe = $(`<div id="html_591ed7d01fd5c46acbb4106780916bfe" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Nelson's         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerH2KXEkdM9l_cH0FWkNh4V7LFDV4erKjA1xRQo2iqLl5j0EPIso0ptbUWt0rzOB_QUHTBeUZ2E9kwJhVLcJMAXWwt0s8tbGluy1l8a371ISFz4_nB16WOvmQNUhEydyIb6aX1SAlY5JMI=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Nelson's">         <b>📍 Address:</b><br>         100 Terranea Way, Rancho Palos Verdes, CA 90275<br><br>         <b>🍽️ Cuisine:</b> Fish<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         The Ceviche or the Ahi Poke Bowl are so fresh and if you're lucky enough to be there during whale watching season they feel like the bait that's drawing them closer. The Fish and Chips are fresh (the oil tastes clean which is another weird thing to say but it's important) but the Spicy Chicken Sandwich is also a big hit (I get no cheese). Grab a glass of Whispering Angel (or two!) and enjoy the cliffside view.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.terranea.com/dining/nelsons/menus" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_0658693ba21176297a0e85a63dda2c93.setContent(html_591ed7d01fd5c46acbb4106780916bfe);
+            
+        
+
+        circle_marker_142ac60f5a3172632f216f1b27ef8fa8.bindPopup(popup_0658693ba21176297a0e85a63dda2c93)
+        ;
+
+        
+    
+    
+            circle_marker_142ac60f5a3172632f216f1b27ef8fa8.bindTooltip(
+                `<div>
+                     Nelson's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e1ea685e6becd76e1c5b2f370fbc6c33 = L.circleMarker(
+                [33.738501, -118.397998],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_668d79e6a025ba96ebf5fce79300d301 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e85000d77774cf49f8157e0d7ffd561 = $(`<div id="html_0e85000d77774cf49f8157e0d7ffd561" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Mar'Sel         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipPLYqaaX7Rwg3IWVoY2ljI8a-goIKoAV-CfJVOW=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Mar'Sel">         <b>📍 Address:</b><br>         100 Terranea Way, Rancho Palos Verdes, CA 90275<br><br>         <b>🍽️ Cuisine:</b> Upscale New American<br><br>         <b>👔 Attire:</b> Resort nice<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Before a dinner here, I had never had a homemade English Muffin. It changed my life- and that's just the free bread. The burrata was incredible, the Carpaccio even better, and the Porcini risotto was a little unmemorable. I'd trade that in for the Ragu di "Carni Bianche" which I only had one bite of but I wanted more. The Pavlova is an incredible end to a meal there, and the atmosphere elegant and refined.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.terranea.com/dining/marsel" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_668d79e6a025ba96ebf5fce79300d301.setContent(html_0e85000d77774cf49f8157e0d7ffd561);
+            
+        
+
+        circle_marker_e1ea685e6becd76e1c5b2f370fbc6c33.bindPopup(popup_668d79e6a025ba96ebf5fce79300d301)
+        ;
+
+        
+    
+    
+            circle_marker_e1ea685e6becd76e1c5b2f370fbc6c33.bindTooltip(
+                `<div>
+                     Mar'Sel
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bc60c27248e6b40fb580669fc8da4cc4 = L.circleMarker(
+                [33.76733, -118.169545],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_12c5d2e3457b7a184746a7e3ed4cfbe8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9ad94960e3ab8981e877d3ac5ced2fa3 = $(`<div id="html_9ad94960e3ab8981e877d3ac5ced2fa3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             The Hare         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipMFQ33hjSfT9pbK2E1V3WKhCjELQbNIuoth5UB9=w141-h235-n-k-no-nu" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="The Hare">         <b>📍 Address:</b><br>         1800 E Broadway, Long Beach, CA 90802<br><br>         <b>🍽️ Cuisine:</b> Bar<br><br>         <b>👔 Attire:</b> Jeans and a going out top<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         I'd call this more of a dive bar than anywhere else on this list, but it's a great place to end the night. Floors are slightly sticky, clientele is all locals, but it's a neighborhood type of place. Nothing immensely special, but a place where you'll still feel at home.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.theharelb.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_12c5d2e3457b7a184746a7e3ed4cfbe8.setContent(html_9ad94960e3ab8981e877d3ac5ced2fa3);
+            
+        
+
+        circle_marker_bc60c27248e6b40fb580669fc8da4cc4.bindPopup(popup_12c5d2e3457b7a184746a7e3ed4cfbe8)
+        ;
+
+        
+    
+    
+            circle_marker_bc60c27248e6b40fb580669fc8da4cc4.bindTooltip(
+                `<div>
+                     The Hare
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c5bb96db52a4ff8c65eb5a4394bb9b68 = L.circleMarker(
+                [33.761145, -118.137562],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_dd40d41f1917974ca2a767e569d0a4bc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8031e313445176b7e73681aeef864ccc = $(`<div id="html_8031e313445176b7e73681aeef864ccc" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Saint & Second         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweo3J9V6EwsBmnOh7bN84y7UIhwqU7nTtnxVyWCGqMnkDJVbMOXdZE1WapZY75UkA0Cyw3wK3mMGo_xGIf9uyjhwefpyJoTJ3f1g-EYtaQ6-BDSkxk3W667vjDSv5wf08LdwRc4ECWEzkA-A=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Saint & Second">         <b>📍 Address:</b><br>         4828 2nd St, Long Beach, CA 90803<br><br>         <b>🍽️ Cuisine:</b> New American<br><br>         <b>👔 Attire:</b> Chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Bone marrow. Parker House Rolls. French Onion Soup. 100 Layer Lasagna. You'll have to roll out of there. Fun on a weeknight, definitely get a reservation either way, the wait can be brutal. And for good reason         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.saintandsecond.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_dd40d41f1917974ca2a767e569d0a4bc.setContent(html_8031e313445176b7e73681aeef864ccc);
+            
+        
+
+        circle_marker_c5bb96db52a4ff8c65eb5a4394bb9b68.bindPopup(popup_dd40d41f1917974ca2a767e569d0a4bc)
+        ;
+
+        
+    
+    
+            circle_marker_c5bb96db52a4ff8c65eb5a4394bb9b68.bindTooltip(
+                `<div>
+                     Saint & Second
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8168a1252bdbf2994962cf21ce559153 = L.circleMarker(
+                [33.759446, -118.133493],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_19e31ba2b724471aa8bc91b4bfb4f428 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e38a30d20f5f3c0fff2b9ff904fd0662 = $(`<div id="html_e38a30d20f5f3c0fff2b9ff904fd0662" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             The Second Owl         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerD__eHh1-PmQjh_itZYFsWcuNSDIKX9JIZ72BZ-ziWHhsCgshLsf_aeIzvpRvpLkzgx8UiTfQy6-kcl6wm3rfbI3FD1S-76o2PQC7zqrfIpP6SMuTNjDfApm1yzu3utroF1pnM6N0Jo9pN=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="The Second Owl">         <b>📍 Address:</b><br>         5272 2nd St, Long Beach, CA 90803<br><br>         <b>🍽️ Cuisine:</b> Thai<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         The Kao Soi curry from here still haunts my dreams. It's silky, spicy, and the meat in it is tender. It's truly a fabulous place.         </div>         <br><br><b>🌐 Website:</b> <a href="https://thesecondowl.square.site/?location_id=LTT7R199BWJXY&fulfillment=PICKUP" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_19e31ba2b724471aa8bc91b4bfb4f428.setContent(html_e38a30d20f5f3c0fff2b9ff904fd0662);
+            
+        
+
+        circle_marker_8168a1252bdbf2994962cf21ce559153.bindPopup(popup_19e31ba2b724471aa8bc91b4bfb4f428)
+        ;
+
+        
+    
+    
+            circle_marker_8168a1252bdbf2994962cf21ce559153.bindTooltip(
+                `<div>
+                     The Second Owl
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_023cc6e039390622f6bbffebe4b0c4c7 = L.circleMarker(
+                [33.755691, -118.119942],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_e49e9ec11ec280904746de339162292b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_61c3d1b2f70162e8f85f3f05f78cd803 = $(`<div id="html_61c3d1b2f70162e8f85f3f05f78cd803" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Marlena         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipOOu_GtW0lix-mwVHr4HWAj_iAEK-0iimiD-ER3=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Marlena">         <b>📍 Address:</b><br>         5854 E Naples Plaza, Long Beach, CA 90803<br><br>         <b>🍽️ Cuisine:</b> Greek<br><br>         <b>👔 Attire:</b> Chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Start with the Bianco bread, but the pizzas are the star of the show. My top two are definitely the spicy salami and the blue oyster mushroom- the crust is thin, there's a little bit of char on the crust, and it compliments the atmosphere perfectly. If you MUST have something green then get some of the olives from the starter menu. I have it on good authority the olive oil is great to dip the bread into, but I can't vouch because I don't like olives.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.marlena-longbeach.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_e49e9ec11ec280904746de339162292b.setContent(html_61c3d1b2f70162e8f85f3f05f78cd803);
+            
+        
+
+        circle_marker_023cc6e039390622f6bbffebe4b0c4c7.bindPopup(popup_e49e9ec11ec280904746de339162292b)
+        ;
+
+        
+    
+    
+            circle_marker_023cc6e039390622f6bbffebe4b0c4c7.bindTooltip(
+                `<div>
+                     Marlena
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6f4dd76844fa032532cce168fc8ae9da = L.circleMarker(
+                [34.089823, -118.392716],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_12f17896b4a51b7ce9ef82c4b2088ab0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b27b67fd36d3c4b41046e992e5a443f8 = $(`<div id="html_b27b67fd36d3c4b41046e992e5a443f8" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             BOA         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipP287PkW0bhtKbDl5mj9a1DflAl0E2pL283JrDb=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="BOA">         <b>📍 Address:</b><br>         9200 Sunset Blvd, West Hollywood, CA 90069<br><br>         <b>🍽️ Cuisine:</b> Steakhouse<br><br>         <b>👔 Attire:</b> Fancy but not black tie<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         I've said it once, and I'll say it again: I'm a sucker for a Parker House Roll, and these are some of the best. The Hamachi Crudo is so fresh and clean, and a hidden gem would definitely be the Goat Cheese Baklava. When I was here, we did family-style dining with a couple of their steaks, but by far the best was the 6666 Ribeye. It's some sort of special collaboration but it is incredible. The wagyu was the same as any other steakhouse, but the twice baked potato with caviar was a little too rich for my blood. I'd drift toward a steak hedre, but I'm sure that the seafood is good too.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.boasteak.com/west-hollywood-location/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_12f17896b4a51b7ce9ef82c4b2088ab0.setContent(html_b27b67fd36d3c4b41046e992e5a443f8);
+            
+        
+
+        circle_marker_6f4dd76844fa032532cce168fc8ae9da.bindPopup(popup_12f17896b4a51b7ce9ef82c4b2088ab0)
+        ;
+
+        
+    
+    
+            circle_marker_6f4dd76844fa032532cce168fc8ae9da.bindTooltip(
+                `<div>
+                     BOA
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7aec4c52bceb09d7a530c67636e954ac = L.circleMarker(
+                [33.902559, -118.387927],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_248ba9c73356478df6eec6a8629c05ff = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_51482048bf7452e2a8d7c0138aabfa9b = $(`<div id="html_51482048bf7452e2a8d7c0138aabfa9b" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Eddie V's         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipPhTv7p0_Qjg5-CMDrigmlFqHOslULxWJQ2lzn8=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Eddie V's">         <b>📍 Address:</b><br>         2101 Rosecrans Ave, El Segundo, CA 90245<br><br>         <b>🍽️ Cuisine:</b> Steakhouse<br><br>         <b>👔 Attire:</b> Fancy but not black tie<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         I'm a sucker for a mule of any sort, so please believe me when  say that the Pomegranate Mule is a spectacular feat. Because I'm picky, I get it with Grey Goose, but if you like Tito's I'm sure that's good too. This is one of the only places I'll get oysters on the half shell, but it's because their cocktail sauce is so incredible. The oysters are basically a vessel for it because it's so good. I'd encourage splitting the Bone-In Ribeye with the Au Gratin Potatoes and the Grilled Asparagus and do your best to not pop a button on your pants.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.eddiev.com/locations/ca/el-segundo/el-segundo/8526" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_248ba9c73356478df6eec6a8629c05ff.setContent(html_51482048bf7452e2a8d7c0138aabfa9b);
+            
+        
+
+        circle_marker_7aec4c52bceb09d7a530c67636e954ac.bindPopup(popup_248ba9c73356478df6eec6a8629c05ff)
+        ;
+
+        
+    
+    
+            circle_marker_7aec4c52bceb09d7a530c67636e954ac.bindTooltip(
+                `<div>
+                     Eddie V's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ecf817a6b7c206be8aae5355cb751d41 = L.circleMarker(
+                [33.902791, -118.382845],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_027ed6a4a9312a293ea5d5fbde55527b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4da8ef3eba138e5eb99a78c9658ac3db = $(`<div id="html_4da8ef3eba138e5eb99a78c9658ac3db" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Flemming's         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoe8q44QEnSJMrjdC4jDKEToumXMpD2Ijq3Y0HBoGkduUdCnKnQqQx2IdLlhnYp8-Sc5Bd1cJ-xDJL6ris-EfSCFi4-KSGphWh7sO3NHCS1F2DScEiQo-lj3GaNL_DZAMfnrBUjFjuM8Sqz=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Flemming's">         <b>📍 Address:</b><br>         2301 Rosecrans Ave #1125, El Segundo, CA 90245<br><br>         <b>🍽️ Cuisine:</b> Steakhouse<br><br>         <b>👔 Attire:</b> Fancy but not black tie<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         The crab cakes are absolutely to die for, and so is the Carpaccio. Something about the sauce drizzled on the top just melts with the thin beef in your mouth and you ascend to the heavens. I'd recommend wholeheartedly getting the garlic butter mushroom topper with whatever steak you choose, because it makes it entirely succulent and earthy. The Short Rib is rich and perfect for the winter, but keep in mind that richness because you'll need to save room for one of the most fabulous glasses of Sauterns at the end (Chateau Climens just in case you get lost).         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.flemingssteakhouse.com/locations/ca/el-segundo" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_027ed6a4a9312a293ea5d5fbde55527b.setContent(html_4da8ef3eba138e5eb99a78c9658ac3db);
+            
+        
+
+        circle_marker_ecf817a6b7c206be8aae5355cb751d41.bindPopup(popup_027ed6a4a9312a293ea5d5fbde55527b)
+        ;
+
+        
+    
+    
+            circle_marker_ecf817a6b7c206be8aae5355cb751d41.bindTooltip(
+                `<div>
+                     Flemming's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fb80eda54e0971bb37bcf307ead7231c = L.circleMarker(
+                [33.885805, -118.409722],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_90f9041260a97aa6ee7df63ef745f595 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7fc3fe089d0406c3057a3e73e29786ad = $(`<div id="html_7fc3fe089d0406c3057a3e73e29786ad" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Sugarfish         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipNOwukoKk-6hj6y-cObg1nWtXW5zKU8lERq6_OX=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Sugarfish">         <b>📍 Address:</b><br>         304 12th St, Manhattan Beach, CA 90266<br><br>         <b>🍽️ Cuisine:</b> New Chinese<br><br>         <b>👔 Attire:</b> Very chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Be adventerous. Go for the "Don't think. Just Eat. Trust Me." and let it take you on the most spectacular omakase journey at one of the most reasonable prices I've seen in a while. Not for the faint of heart though, as I was exposed to fresh uni for the first time here and while that particular piece I would not enjoy again I'm sure other people will like it.         </div>         <br><br><b>🌐 Website:</b> <a href="https://sugarfishsushi.com/locations/manhattan-beach/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_90f9041260a97aa6ee7df63ef745f595.setContent(html_7fc3fe089d0406c3057a3e73e29786ad);
+            
+        
+
+        circle_marker_fb80eda54e0971bb37bcf307ead7231c.bindPopup(popup_90f9041260a97aa6ee7df63ef745f595)
+        ;
+
+        
+    
+    
+            circle_marker_fb80eda54e0971bb37bcf307ead7231c.bindTooltip(
+                `<div>
+                     Sugarfish
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_63761d23f69675e505d56e4be52f4f9f = L.circleMarker(
+                [34.06921, -118.4061],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_6e78cf35ee461024641dc77371d7ee80 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_397bc9096b63ea497b683d92921d6ec3 = $(`<div id="html_397bc9096b63ea497b683d92921d6ec3" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Crustaean         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipOFhTVa6s0xmvUbG0CcT1J7inIq2-UBHQ2R1X7F=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Crustaean">         <b>📍 Address:</b><br>         468 N Bedford Dr, Beverly Hills, CA 90210<br><br>         <b>🍽️ Cuisine:</b> Vietamese and Fish<br><br>         <b>👔 Attire:</b> Nice<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Completely bypass half the menu and head for the secret section at the bottom. Ask your server very nicely to do an order of the crab out of the shell WITH the famous garlic noodles. Acompany it with the Wagyu Fried Rice (the pineapple is so pleasant and tart) and the Ginger Sea Bass. Highly reccomend the incredible Coconut Margarita with a black salt rim- it had some sort of fancy name that's escaping me right now.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.crustaceanbh.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_6e78cf35ee461024641dc77371d7ee80.setContent(html_397bc9096b63ea497b683d92921d6ec3);
+            
+        
+
+        circle_marker_63761d23f69675e505d56e4be52f4f9f.bindPopup(popup_6e78cf35ee461024641dc77371d7ee80)
+        ;
+
+        
+    
+    
+            circle_marker_63761d23f69675e505d56e4be52f4f9f.bindTooltip(
+                `<div>
+                     Crustaean
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6d1aa8f2cbe8862b322e3bcce622e28 = L.circleMarker(
+                [34.066702, -118.400737],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_0a248ba39fa93dd2b924897aad09dc0a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_28095d515dfb3deed5410ce193ec31ed = $(`<div id="html_28095d515dfb3deed5410ce193ec31ed" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             CUT         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipOTIEN9c160ZegNJb7vAVi-hLmGKsc3fytwJTcK=w243-h174-n-k-no-nu" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="CUT">         <b>📍 Address:</b><br>         9500 Wilshire Blvd, Beverly Hills, CA 90212<br><br>         <b>🍽️ Cuisine:</b> Steakhouse<br><br>         <b>👔 Attire:</b> Fancy but not black tie<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         There are a few of these too, but I've never had as much fun at them as I have at this location. Maybe it's the staff, maybe it was the company, but this is a CUT above the rest (ha get it) and especially convienent if you're staying in the Beverly Wilshire Hotel, where it's located. Or, if you're just feeling boujee.          </div>         <br><br><b>🌐 Website:</b> <a href="https://wolfgangpuck.com/restaurants/cut-beverly-hills/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_0a248ba39fa93dd2b924897aad09dc0a.setContent(html_28095d515dfb3deed5410ce193ec31ed);
+            
+        
+
+        circle_marker_d6d1aa8f2cbe8862b322e3bcce622e28.bindPopup(popup_0a248ba39fa93dd2b924897aad09dc0a)
+        ;
+
+        
+    
+    
+            circle_marker_d6d1aa8f2cbe8862b322e3bcce622e28.bindTooltip(
+                `<div>
+                     CUT
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b4a97483d076c1f3cd8a964e72b95ad2 = L.circleMarker(
+                [34.068476, -118.404385],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_b7c326c3dc4fc9094b6080734926d6ad = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c2c63d86492434679c9f5141fd005541 = $(`<div id="html_c2c63d86492434679c9f5141fd005541" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Bacari         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipMczgGaYrCtqC9NNI5jWAhLXjKuvJMqKhy8QSvB=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Bacari">         <b>📍 Address:</b><br>         9601 Brighton Way, Beverly Hills, CA 90210<br><br>         <b>🍽️ Cuisine:</b> Mediterrenean<br><br>         <b>👔 Attire:</b> Nice<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         There's too many good things on this menu to just point to a few things, but I will anyway. The Lamb Hummus is incredible, as are the Shawarma Tacos, but one of the best is the street corn. If it's warm enough to sit outside, go for it. The people watching is out of this world.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.eatwithbacari.com/beverly-hills" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_b7c326c3dc4fc9094b6080734926d6ad.setContent(html_c2c63d86492434679c9f5141fd005541);
+            
+        
+
+        circle_marker_b4a97483d076c1f3cd8a964e72b95ad2.bindPopup(popup_b7c326c3dc4fc9094b6080734926d6ad)
+        ;
+
+        
+    
+    
+            circle_marker_b4a97483d076c1f3cd8a964e72b95ad2.bindTooltip(
+                `<div>
+                     Bacari
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_278e88c7c787cc0c2124e0367a9e27b1 = L.circleMarker(
+                [34.068812, -118.398774],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_45ff3de24c25fe4a4158db9ea18b1b59 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e66c2bd807d7e69c8f719d1a2468fdb5 = $(`<div id="html_e66c2bd807d7e69c8f719d1a2468fdb5" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Mastro's Ocean Club         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipPX2JE3IKnIcbusYo-ujO_RDlq6KMG2kmrc3Pq7=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Mastro's Ocean Club">         <b>📍 Address:</b><br>         246 N Canon Dr, Beverly Hills, CA 90210<br><br>         <b>🍽️ Cuisine:</b> Fish<br><br>         <b>👔 Attire:</b> Fancy but not black tie<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         There's a handful of these, but this location is only second to the location in Las Vegas. The Sea Bass might be the best thing on the menu because it's so simply done, there's not a fancy sauce to hide behind, just the crisp taste of the fish and the buttery texture of the sea bass in the first place. The Butter Cake is worth getting, but it is very rich at the end of the meal and unfortunately does not travel very well.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.mastrosrestaurants.com/location/mastros-ocean-club-la/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_45ff3de24c25fe4a4158db9ea18b1b59.setContent(html_e66c2bd807d7e69c8f719d1a2468fdb5);
+            
+        
+
+        circle_marker_278e88c7c787cc0c2124e0367a9e27b1.bindPopup(popup_45ff3de24c25fe4a4158db9ea18b1b59)
+        ;
+
+        
+    
+    
+            circle_marker_278e88c7c787cc0c2124e0367a9e27b1.bindTooltip(
+                `<div>
+                     Mastro's Ocean Club
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_573f87161abe637aa5cad8226080d812 = L.circleMarker(
+                [34.06636, -118.412995],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_1fa4cfebf5a92b5ea01359a3737d520d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_867bb27a3827ddc9111f2ec95e5c2a6d = $(`<div id="html_867bb27a3827ddc9111f2ec95e5c2a6d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Circa 55         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoQoCuJvh1mBxr8irKAGMHBg1F5Z5_Jwcl8hrEP0i_Ck4UqEnQN7p-IOluDUymomafLmjhkJghtj4ZgSHeYA95w8tlMLW6XSuV4xh0BEaOcf31n2yaGNNvInbPg9Iaum7AFjwIv=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Circa 55">         <b>📍 Address:</b><br>         9876 Wilshire Blvd, Beverly Hills, CA 90210<br><br>         <b>🍽️ Cuisine:</b> Upscale New American<br><br>         <b>👔 Attire:</b> Nice<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         I'd recommend this place for their clean breakfast smoothies, juices, and health-food options. It feels like somewhere out of a wellness retreat (with a stunning view) but their pancakes are to die for. Get all the toppings on the side though, beause it's too much alltogther. But, share them with the table if you need something savory too.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.hilton.com/en/hotels/laxbhhh-the-beverly-hilton/dining/circa-55-rooftop-restaurant-lounge/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_1fa4cfebf5a92b5ea01359a3737d520d.setContent(html_867bb27a3827ddc9111f2ec95e5c2a6d);
+            
+        
+
+        circle_marker_573f87161abe637aa5cad8226080d812.bindPopup(popup_1fa4cfebf5a92b5ea01359a3737d520d)
+        ;
+
+        
+    
+    
+            circle_marker_573f87161abe637aa5cad8226080d812.bindTooltip(
+                `<div>
+                     Circa 55
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_142b4bc0117da5fd96b925328282da21 = L.circleMarker(
+                [34.065635, -118.409691],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_b30028734611998d7adb4473449fda3c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_35c4e4cd3b6ea910e8beebdcb9d0ca98 = $(`<div id="html_35c4e4cd3b6ea910e8beebdcb9d0ca98" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Bar Noir         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoSeFqKussL45V9gIRhMA4MUtOTB_YKWHGBF8KCdvezNCykJN123uOSb9FkQqd0KEF2Mepq3zCuhz6JqYDbriuBVe5RNgRMq1WMQdZdWvNciyM06zcSrlUjwe_4eDfySFlKRETtgk7XhySH=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Bar Noir">         <b>📍 Address:</b><br>         140 S Lasky Dr, Beverly Hills, CA 90212<br><br>         <b>🍽️ Cuisine:</b> Bar<br><br>         <b>👔 Attire:</b> Jeans and a going out top<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         This is one of the best-kept industry secret bars. It's a quieter place to go, in a boutique hotel in Beverly Hills, and a very popular spot for wrap parties for the studios down the way. It's dark, moody, and the drinks are very well crafted. They're also one of the only bars that I know of that does an absinthe tasting, which is a perfect "I did it once" type of experience!         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.facebook.com/p/Bar-Noir-Maison-140-Beverly-Hills-100068586385148/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_b30028734611998d7adb4473449fda3c.setContent(html_35c4e4cd3b6ea910e8beebdcb9d0ca98);
+            
+        
+
+        circle_marker_142b4bc0117da5fd96b925328282da21.bindPopup(popup_b30028734611998d7adb4473449fda3c)
+        ;
+
+        
+    
+    
+            circle_marker_142b4bc0117da5fd96b925328282da21.bindTooltip(
+                `<div>
+                     Bar Noir
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_421cb74c12b90777078002320cd70800 = L.circleMarker(
+                [34.09239, -118.279927],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_506b9a33fa63bea1fb72f7eb542b4578 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a240e53039a2602649d20fe636bccb25 = $(`<div id="html_a240e53039a2602649d20fe636bccb25" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Tartine         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwer9Y6kJ_rFfG7pxOVlz6L4VBzWpC6GMlZHFoRypFl5k2hzdzTBiW5LhUAQ-T27gdAwlrmcRQy4pODl5KF4-X5KRxuGWvr9P10NcPcvRGjksJ4AjMx-nL8L663scIPqF-p6NVqmU=w243-h174-n-k-no-nu" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Tartine">         <b>📍 Address:</b><br>         3921 Sunset Blvd, Los Angeles, CA 90029<br><br>         <b>🍽️ Cuisine:</b> Bakery<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         It's rare that I find a good club sandwich ouside of a diner, especially one at a place that looks as pretty as Tartine. The Turkey Club is somehow out of this world, and it's honestly even better for breakfast if you add an egg. This would by no means be a light meal, though it might if you end up with one of the salads that I'm sure is tasty enough.          </div>         <br><br><b>🌐 Website:</b> <a href="https://tartinebakery.com/los-angeles/silverlake" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_506b9a33fa63bea1fb72f7eb542b4578.setContent(html_a240e53039a2602649d20fe636bccb25);
+            
+        
+
+        circle_marker_421cb74c12b90777078002320cd70800.bindPopup(popup_506b9a33fa63bea1fb72f7eb542b4578)
+        ;
+
+        
+    
+    
+            circle_marker_421cb74c12b90777078002320cd70800.bindTooltip(
+                `<div>
+                     Tartine
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9ec31145046b463cd7aa686447e4e346 = L.circleMarker(
+                [34.03904, -118.66965],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_b019c64ba8d05f433a37d1f075b12f1e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3629a77ce6c6c0c4afc389e493cc4f06 = $(`<div id="html_3629a77ce6c6c0c4afc389e493cc4f06" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Nobu         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipN57l5b2TnWLaOSrYP-5NWFXGUnGYO9TbcXYjjl=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Nobu">         <b>📍 Address:</b><br>         22706 Pacific Coast Hwy, Malibu, CA 90265<br><br>         <b>🍽️ Cuisine:</b> Fish<br><br>         <b>👔 Attire:</b> Very chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Yes, I know this place is for the influencers. Go during lunch when the view of the beach and the water is at its peak, and you won't regret it. Go for the Yellowtail and Jalapeno, skip the Toro Tartare, but trade it in for the Seaweed Salad. The Spicy Tuna Crispy Rice will not be presented in the way you would expect, for better or for worse, but the Wagyu Tacos exceed expectations. The Black Cod is a staple for a reason, and the Affogato with specifically the Black Honey Gelato is incredibly memorable. Make sure the phone eats too- you've gotta fit in somewhere.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.noburestaurants.com/malibu/nobu-malibu-japanese-restaurant-bar-and-lounge" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_b019c64ba8d05f433a37d1f075b12f1e.setContent(html_3629a77ce6c6c0c4afc389e493cc4f06);
+            
+        
+
+        circle_marker_9ec31145046b463cd7aa686447e4e346.bindPopup(popup_b019c64ba8d05f433a37d1f075b12f1e)
+        ;
+
+        
+    
+    
+            circle_marker_9ec31145046b463cd7aa686447e4e346.bindTooltip(
+                `<div>
+                     Nobu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6c0c7ea67bbd7a4aaa88110efd075e58 = L.circleMarker(
+                [33.754197, -118.291895],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_ca4d792dae944e3f4b80245e6fcf9b53 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3a03fc2dc3cebeccdf578decf32eaf53 = $(`<div id="html_3a03fc2dc3cebeccdf578decf32eaf53" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Big Nick's         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepKeddqFaXwApjxmuv6hV0Jb_ai8gvOT59A0xrbwk2NryZScPtkCGy_SdwqPNVhn4JUAsAwIRTftkrfNl1NFdiJfNToPczf2rztfpvKalPVML1fvimPd9eFEFZNsZV5GIZ1tGOrT_w1ZJQ=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Big Nick's">         <b>📍 Address:</b><br>         1110 N Gaffey St, San Pedro, CA 90731<br><br>         <b>🍽️ Cuisine:</b> Pizza<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         This is the perfect pizza place for takeout, but if you're going to get anything else then I'd eat in. It doesn't usually travel well. The BBQ Chicken pizza has one of the best thin BBQ sauces that's sweet, vinegary, and just a little spicy but it soaks into the crust for one of the most tantalizing experiences. My dad vouches for their meat-lovers pizza, but somehow I never get to have a piece of that.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.bignickspizza.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_ca4d792dae944e3f4b80245e6fcf9b53.setContent(html_3a03fc2dc3cebeccdf578decf32eaf53);
+            
+        
+
+        circle_marker_6c0c7ea67bbd7a4aaa88110efd075e58.bindPopup(popup_ca4d792dae944e3f4b80245e6fcf9b53)
+        ;
+
+        
+    
+    
+            circle_marker_6c0c7ea67bbd7a4aaa88110efd075e58.bindTooltip(
+                `<div>
+                     Big Nick's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc055288e7ada7d4234277c000e58512 = L.circleMarker(
+                [33.831818, -118.294577],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_1077bc5ee7a9b28cc2e849f02def51bb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_67b2480f9bc791b3f866c6f4fa948c03 = $(`<div id="html_67b2480f9bc791b3f866c6f4fa948c03" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Golden Pheasant         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweoqju_RuoHpoT5F8sF0p5MXYdd7uPMMR0Gbo4VmqUJl23nA6A8ElxU96KgqIIwpYDZ0j27L86X2K38AmKXVk5gCjNL8reQ4RnKBm6YneBU-5kfIOt81PHvePcwdjFYGwD50WJc=w243-h406-n-k-no-nu" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Golden Pheasant">         <b>📍 Address:</b><br>         1077 W Carson St, Torrance, CA 90502<br><br>         <b>🍽️ Cuisine:</b> Chinese<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Currently, this spot is temporarily closed. However, if it's after March 9th, then make a beeline for this place before everyone else realizes it's open again. Their wonton soup is the most comforting thing that I've ever eaten, and the Mongolian Beef is so thinly sliced it's almost paper thin. If you must have something green, the Sauteed Chicken with String Beans has a deliciously garlicky and tangy sauce. If noodles are more your thing, the BBQ Pork Pan Fried Noodle is mouth-watering. The menu is like the Cheesecake Factory- it's pages and pages of things that are all delicious. The only thing I'd not get tricked by is the Sizzling Rice Soup, because the rice just gets soggy after a while.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.instagram.com/thegoldenpheasant/?hl=en" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_1077bc5ee7a9b28cc2e849f02def51bb.setContent(html_67b2480f9bc791b3f866c6f4fa948c03);
+            
+        
+
+        circle_marker_dc055288e7ada7d4234277c000e58512.bindPopup(popup_1077bc5ee7a9b28cc2e849f02def51bb)
+        ;
+
+        
+    
+    
+            circle_marker_dc055288e7ada7d4234277c000e58512.bindTooltip(
+                `<div>
+                     Golden Pheasant
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9bff2365626c765f36492cfbfce92454 = L.circleMarker(
+                [34.102084, -118.324359],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_945cb4b6477aec7cb853e9429a77fd3f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e59438325d295e1f51bf229658640c2 = $(`<div id="html_2e59438325d295e1f51bf229658640c2" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Totoyama Sushi         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipM1YqCCNegwLYIJPG-D9wODRSrIS7yKEA0yhTqi=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Totoyama Sushi">         <b>📍 Address:</b><br>         6201 Hollywood Blvd Suite 118, Los Angeles, CA 90028<br><br>         <b>🍽️ Cuisine:</b> Sushi<br><br>         <b>👔 Attire:</b> Chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         This is an intimate, warm sushi restaurant. The chef is right there, and will tell you about anything you want to hear. If the place is empty enough, you can ask him about his early days and there's a few interesting stories there. The sushi is fresh, clean, and all very well put together. It's a short walk to the Hollywood Pantages Theatre, and if you're catching a matinee it's the perfect prequel. Make a reservation there though, just in case.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.totoyamasushi.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_945cb4b6477aec7cb853e9429a77fd3f.setContent(html_2e59438325d295e1f51bf229658640c2);
+            
+        
+
+        circle_marker_9bff2365626c765f36492cfbfce92454.bindPopup(popup_945cb4b6477aec7cb853e9429a77fd3f)
+        ;
+
+        
+    
+    
+            circle_marker_9bff2365626c765f36492cfbfce92454.bindTooltip(
+                `<div>
+                     Totoyama Sushi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d7d256db77571946b2eb1a93dcea892f = L.circleMarker(
+                [33.851948, -118.389977],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_c3e01087c20191ba6d105f7ce3f411d3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_79fd9e23fff026ca04de4c1847617e6f = $(`<div id="html_79fd9e23fff026ca04de4c1847617e6f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Slice and Pint         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepuyajkmiTmzvEBQp_s0kYlBASA_45Y4LaV2EDOiA8pDm-ks30nEShMNi_fHGe3ISrOgJkU1daA02ZXpyQJRFrbWHi-Zs002bvrCTkV9yyDiCoZ0wR8U4fxbg4sSzZ9lc_YtjFgbg=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Slice and Pint">         <b>📍 Address:</b><br>         601 N Pacific Coast Hwy, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Pizza<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         I love that you can get a couple slices and a pint here for a reasonable price. They have interesting rotating selection that you can get individually, but they also have a curated list of phenomenal pizzas that changes every day. The beer here is all from local breweries around Redondo, El Segundo, and Manhattan Beach. It's a truly local place that has high ceilings and a little bit of an industrial vibe. Plus- consistent 80s music.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.thesliceandpint.com/menu/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_c3e01087c20191ba6d105f7ce3f411d3.setContent(html_79fd9e23fff026ca04de4c1847617e6f);
+            
+        
+
+        circle_marker_d7d256db77571946b2eb1a93dcea892f.bindPopup(popup_c3e01087c20191ba6d105f7ce3f411d3)
+        ;
+
+        
+    
+    
+            circle_marker_d7d256db77571946b2eb1a93dcea892f.bindTooltip(
+                `<div>
+                     Slice and Pint
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_23a7012c2ba20ba0049c5f2aaf1e93ff = L.circleMarker(
+                [33.81685, -118.37711],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_d2cdd8a367b5176db89f0f204bb550dd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c06bf1cceb4479ca0d1d7ad6a5caef4 = $(`<div id="html_1c06bf1cceb4479ca0d1d7ad6a5caef4" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Yum Thai Bistro         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweotpWq22ZwYi1jEmc769QBH5c7Vx9uykfv28hHx9zckhf5PDOJ7eYWIuTNRaymA25VDfRy0BPjeEnMphSoMUgTUwCD7M6hD3GI0LNr_yq86bC0AWRcKPmYQJidI_nk1cmY5o49CelA2WAUq=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Yum Thai Bistro">         <b>📍 Address:</b><br>         1888 CA-1, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Thai<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         This place is usually a prequel to the ice cream shop next door (see the Handel's description) but it is the perfect overture. Light, fresh Thai food with kind service and some of the best fried tofu as an appetizer. The Tom Kha is velvety yet still light from the bright lemongrass and lime juice, and the Pad Thai is the first one I've ever had and is by default the one I measure all the rest against. Don't fill all the way up though, Handel's is next door.         </div>         <br><br><b>🌐 Website:</b> <a href="https://yumthaibistro.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_d2cdd8a367b5176db89f0f204bb550dd.setContent(html_1c06bf1cceb4479ca0d1d7ad6a5caef4);
+            
+        
+
+        circle_marker_23a7012c2ba20ba0049c5f2aaf1e93ff.bindPopup(popup_d2cdd8a367b5176db89f0f204bb550dd)
+        ;
+
+        
+    
+    
+            circle_marker_23a7012c2ba20ba0049c5f2aaf1e93ff.bindTooltip(
+                `<div>
+                     Yum Thai Bistro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_32c64791c73dcc056df724a990aa3a49 = L.circleMarker(
+                [33.816733, -118.377598],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_60a13db0017ce13fb1cbb7ff721cb1cd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c83e420ebea54213a7d7e72642fb051c = $(`<div id="html_c83e420ebea54213a7d7e72642fb051c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Handel's Ice Cream         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerCYqvPlZUyMlBY20tk8gGV7K5HtftmghdonKQAnRxtNhb_4Y41Hz6v3qQzWrY5L1BTC0_zM4R4pD4qGI7VWhaPvQM6Gz76bq2lIEBAXXbrYYF0tf8jJ6T3RrRVViXuZB8gCaCyLLDsU_w=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Handel's Ice Cream">         <b>📍 Address:</b><br>         1882 S Pacific Coast Hwy, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Dessert<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         I can't eat any other ice cream without wishing it was from this place. It's fresh, dense, and they do not skimp on the toppings. When I'm in the mood to chew my ice cream, I gravitate to the Oree-Dough, which has chocolate chip cookie dough and Oreo pieces scattered throughout a creamy vanilla base. However, if I just want to sit there and enjoy a scoop on a cone,  then I'd push you toward their cake batter flavor. It's exactly like yellow cake batter, but without the risk of salmonella. The list of flavors is a mile long, and there's something for everyone there.          </div>         <br><br><b>🌐 Website:</b> <a href="https://handelsicecream.com/store/redondo-beach/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_60a13db0017ce13fb1cbb7ff721cb1cd.setContent(html_c83e420ebea54213a7d7e72642fb051c);
+            
+        
+
+        circle_marker_32c64791c73dcc056df724a990aa3a49.bindPopup(popup_60a13db0017ce13fb1cbb7ff721cb1cd)
+        ;
+
+        
+    
+    
+            circle_marker_32c64791c73dcc056df724a990aa3a49.bindTooltip(
+                `<div>
+                     Handel's Ice Cream
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c2d8f290d2076db55a8c2761a2e60c97 = L.circleMarker(
+                [33.802208, -118.329355],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_c09e2565a297128a353dd2be581a79a3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf23139ffabe66428f8597886cd791e6 = $(`<div id="html_cf23139ffabe66428f8597886cd791e6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Ko-Ryu Ramen         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqWpB5NL0Iv-s7vnJIGY5RSrhurvQ_HFLJp9Y5e1ABbRqs4_EjrOTQHV1QK0ejyUy0f_g_KqTtnXSmOSBQwZsfuI0Hv_Y_cxeUt4JvnLzvbP5xVSDtN91zEge7TzFOoKwkg0rjZ=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Ko-Ryu Ramen">         <b>📍 Address:</b><br>         24631 Crenshaw Blvd unit K, Torrance, CA 90505<br><br>         <b>🍽️ Cuisine:</b> Ramen<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         A little chill in the breeze? Head down to one of their two locations to ward it off. Their Koi Ramen is incredibly rich that warms you from the inside out because they use both chicken and pork in this tonkotsu-style broth. I like to get it with bamboo shoots for that texture, but there's a variety of additional toppings that can personalize the bowl to your taste. The gyoza appetizer is a great starter, and you can tell that they're made in house. The way they package it too is well-designed and travels well back to wherever you're staying.         </div>         <br><br><b>🌐 Website:</b> <a href="https://koryuramen.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_c09e2565a297128a353dd2be581a79a3.setContent(html_cf23139ffabe66428f8597886cd791e6);
+            
+        
+
+        circle_marker_c2d8f290d2076db55a8c2761a2e60c97.bindPopup(popup_c09e2565a297128a353dd2be581a79a3)
+        ;
+
+        
+    
+    
+            circle_marker_c2d8f290d2076db55a8c2761a2e60c97.bindTooltip(
+                `<div>
+                     Ko-Ryu Ramen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5297383c072db66174ecc93790070e65 = L.circleMarker(
+                [33.805929, -118.328868],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_dac0b19d341b6fc3b41630d479672e19 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c7d2aadc5310faac920f7c389a323bbf = $(`<div id="html_c7d2aadc5310faac920f7c389a323bbf" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Ginza AYCE Sushi         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweodsXo08ITsXDQBtek2DPfWHJOS1jMo8ruD4cQ5o2AUozLIAn7pmgLAwoDmEm-SmA1411sMAFENa3Xp87tlDAskVrnTzogsjJF9hEHbHapu1XxCdi8MbWnm4VVrtmJIT2gJyouVBQ=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Ginza AYCE Sushi">         <b>📍 Address:</b><br>         24215 Crenshaw Blvd, Torrance, CA 90505<br><br>         <b>🍽️ Cuisine:</b> Sushi<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         A great casual, neighborhood sushi spot that feels pretty authentic. This isn't the type of place to go to for omakase, but their specialty rolls are fresh and some have unique flavor combinations that have influence from all over the world. Conviently located and a good spur-of-the-moment place when you need a bite!         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.ginzasushitorrance.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_dac0b19d341b6fc3b41630d479672e19.setContent(html_c7d2aadc5310faac920f7c389a323bbf);
+            
+        
+
+        circle_marker_5297383c072db66174ecc93790070e65.bindPopup(popup_dac0b19d341b6fc3b41630d479672e19)
+        ;
+
+        
+    
+    
+            circle_marker_5297383c072db66174ecc93790070e65.bindTooltip(
+                `<div>
+                     Ginza AYCE Sushi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2f6f196fe11fa003ff5d3cba53949429 = L.circleMarker(
+                [33.803206, -118.320223],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_2a7a04e4a0b021d100000f3799524057 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_48722ac8e5cd5dd5f974e1d7ecb53f8d = $(`<div id="html_48722ac8e5cd5dd5f974e1d7ecb53f8d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Bonnello's         </h4>         <img src="https://lh3.googleusercontent.com/gps-proxy/ALd4DhEoc6V6i2hL_eab6dCxq6W8aglGg8qhmWVN86axUVvZ7vNXjXkRB8k7zEBwOt73v3unWcOkfCNNvEkj7uBLP8_gjkdpowf-gEJKQH7QRT7P53zEP6p1HUS3VJazdBZ2owwn10uXsEyEvwyJHwGR_uCEwKMFbhJ3qsGzkdYU5D8X33ymH-XlxbN5ylg=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Bonnello's">         <b>📍 Address:</b><br>         24427 Narbonne Ave, Lomita, CA 90717<br><br>         <b>🍽️ Cuisine:</b> Pizza<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Nestled in Downtown Lomita, this pizza place has been there for as long as anyone can remember. Their Sicillian slices are the perfect blend of crispy, thick, with a rich tomato sauce that can only be from San Marzano tomatoes. The windows have paint drawings all over that are chipped, and the photographs are faded, but this place isn't going anywhere anytime soon.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.yelp.com/biz/bonellos-new-york-pizza-lomita" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_2a7a04e4a0b021d100000f3799524057.setContent(html_48722ac8e5cd5dd5f974e1d7ecb53f8d);
+            
+        
+
+        circle_marker_2f6f196fe11fa003ff5d3cba53949429.bindPopup(popup_2a7a04e4a0b021d100000f3799524057)
+        ;
+
+        
+    
+    
+            circle_marker_2f6f196fe11fa003ff5d3cba53949429.bindTooltip(
+                `<div>
+                     Bonnello's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_50c74b9b8f4a4394a054f275f95e065d = L.circleMarker(
+                [33.801997, -118.319696],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_02262dd3aa270282651ab48ac0c6ea23 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c6e655e0455f872d9b45ddbe74adb389 = $(`<div id="html_c6e655e0455f872d9b45ddbe74adb389" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Corridor Flow         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipNCsjUlkpmqAyv61o94R7d3AlrDy1PABdOIWtHF=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Corridor Flow">         <b>📍 Address:</b><br>         24614 Narbonne Ave, Lomita, CA 90717<br><br>         <b>🍽️ Cuisine:</b> Coffee<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Of the pretentious coffee shops in Los Angeles, this is one of the best. Yes, they have the seven-dollar lattes, but the Cereal Latte is one of the best. Their bagel and lox isn't bad either- but their Avodaco Toast is absolutely killer. Their matcha is pretty good, but I'd stick to the coffee.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.corridorflow.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_02262dd3aa270282651ab48ac0c6ea23.setContent(html_c6e655e0455f872d9b45ddbe74adb389);
+            
+        
+
+        circle_marker_50c74b9b8f4a4394a054f275f95e065d.bindPopup(popup_02262dd3aa270282651ab48ac0c6ea23)
+        ;
+
+        
+    
+    
+            circle_marker_50c74b9b8f4a4394a054f275f95e065d.bindTooltip(
+                `<div>
+                     Corridor Flow
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_60664e3e15375ef16b45eebf8cbbab46 = L.circleMarker(
+                [33.816388, -118.387402],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_d183f663379c0d0d408c6c6412127680 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_455b4dced8d8613229539ea4a7723c4d = $(`<div id="html_455b4dced8d8613229539ea4a7723c4d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Hi-Fi Espresso         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepfjTlc_F2hs3LEmrG5MeGvSFJdPi4zerjYMcn6BuuDK4NGrHmcKJmhVNngwN89Abz-N9wA6NBtJlvyNUnlSDs9EFx3ybf0cY45amPeMfztLsFpMTp-UZ0gL0lO804KMFfd5nS6=w243-h304-n-k-no-nu" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Hi-Fi Espresso">         <b>📍 Address:</b><br>         1815 S Catalina Ave, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Coffee<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         I love this place! Especially, I love the Bees Knees latte- the hot honey is such a pleasant surprise and somehow works. This is strange for me, because I don't tend to like spicy drinks but this is an exception. The French Toast Latte is also very pleasant- the cinnamon and maple work in harmony with the bitter coffee. Theres a few locations, but I like this one the best.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.hifiespresso.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_d183f663379c0d0d408c6c6412127680.setContent(html_455b4dced8d8613229539ea4a7723c4d);
+            
+        
+
+        circle_marker_60664e3e15375ef16b45eebf8cbbab46.bindPopup(popup_d183f663379c0d0d408c6c6412127680)
+        ;
+
+        
+    
+    
+            circle_marker_60664e3e15375ef16b45eebf8cbbab46.bindTooltip(
+                `<div>
+                     Hi-Fi Espresso
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c40a592e66ca0557c8be1d3becbbb48 = L.circleMarker(
+                [33.748064, -118.406911],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_674b3581fdb1b7e2a52a5af287403216 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_70c2d2592192d8cfbeba6af740df376c = $(`<div id="html_70c2d2592192d8cfbeba6af740df376c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Yellow Vase         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerkLwWEwHjOCOKI-qo17iHWUhTlC04wjNFq9AHIbYOBpyNYMYYNtf7f4nelSEb-TI2jlw0e5GXoVykSLLSbvHQWtqXQgRdrwDN4dIMeLCgAW7AZeBE8SzcwLoxSCoh2fKPx4TjF=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Yellow Vase">         <b>📍 Address:</b><br>         31248 Palos Verdes Dr W, Rancho Palos Verdes, CA 90275<br><br>         <b>🍽️ Cuisine:</b> Breakfast<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         There's several locations, but this one has the best view. I prefer their sweet crepes to the savory options, but that's true for any crepe. It's super fast and tasty, but don't get tricked by the quiches in the window. The crepes are much better, and so is the Croque Madame. Their lattes are pleasant, but nothing to write home about.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.yellowvase.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_674b3581fdb1b7e2a52a5af287403216.setContent(html_70c2d2592192d8cfbeba6af740df376c);
+            
+        
+
+        circle_marker_1c40a592e66ca0557c8be1d3becbbb48.bindPopup(popup_674b3581fdb1b7e2a52a5af287403216)
+        ;
+
+        
+    
+    
+            circle_marker_1c40a592e66ca0557c8be1d3becbbb48.bindTooltip(
+                `<div>
+                     Yellow Vase
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6087537b146bcf73953dc858946458c5 = L.circleMarker(
+                [33.748141, -118.406476],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_b23c24870a861f3a0700b646811eee96 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_55db7e6efc57170beb20507fabacaade = $(`<div id="html_55db7e6efc57170beb20507fabacaade" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Avenue Italy         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipMFbHA_NuQ2njJNJVUOrG1p1HbPwsXpCbS0TO9q=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Avenue Italy">         <b>📍 Address:</b><br>         31243 Palos Verdes Dr W, Rancho Palos Verdes, CA 90275<br><br>         <b>🍽️ Cuisine:</b> Italian<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         This is a great Italian place with a gorgeous view and fresh ingredients. Pro tip- pull up the menu on your phone and get a Bruschetta for the table for free! The Rigatoni con Luganega is perfect, but the Spaghetti Aglio, Olio, e Peperocino is better somehow. It's the type of dish that you go home and try to recreate for years but with no avail.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.avenueitaly.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_b23c24870a861f3a0700b646811eee96.setContent(html_55db7e6efc57170beb20507fabacaade);
+            
+        
+
+        circle_marker_6087537b146bcf73953dc858946458c5.bindPopup(popup_b23c24870a861f3a0700b646811eee96)
+        ;
+
+        
+    
+    
+            circle_marker_6087537b146bcf73953dc858946458c5.bindTooltip(
+                `<div>
+                     Avenue Italy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_966b93d380b2424c0892d4d0768e8037 = L.circleMarker(
+                [33.77088, -118.36745],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_386c14a1c17e25df883cd8ffc7a0c879 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3763f525996e64f9d78d73e781f8995c = $(`<div id="html_3763f525996e64f9d78d73e781f8995c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             The Crepery Café         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipPmwe1-kAzRFt4Bf4I4rK-gf3exXnscmi_mcJDQ=w243-h174-n-k-no-nu" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="The Crepery Café">         <b>📍 Address:</b><br>         810 Silver Spur Rd, Rolling Hills Estates, CA 90274<br><br>         <b>🍽️ Cuisine:</b> Breakfast<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         As the name suggests, the crepes from here are pretty good, but surprisingly so are the Chilaquiles. Wednesday mornings around 8-9 there'll be a huge rush of highschool students, but every other time it would be an easy breakfast spot to pop into!         </div>         <br><br><b>🌐 Website:</b> <a href="https://thecreperycafe.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_386c14a1c17e25df883cd8ffc7a0c879.setContent(html_3763f525996e64f9d78d73e781f8995c);
+            
+        
+
+        circle_marker_966b93d380b2424c0892d4d0768e8037.bindPopup(popup_386c14a1c17e25df883cd8ffc7a0c879)
+        ;
+
+        
+    
+    
+            circle_marker_966b93d380b2424c0892d4d0768e8037.bindTooltip(
+                `<div>
+                     The Crepery Café
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8667bef564b60875bdf9745cfbe348cb = L.circleMarker(
+                [33.774249, -118.375462],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_5367db4794673e4e4cbb4a11dce696ed = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10e6a2eee29e78ef6fa020241d7acaf9 = $(`<div id="html_10e6a2eee29e78ef6fa020241d7acaf9" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Dragonfly Thai         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipPgV_OVP6lcCGLw8-cujTSpaW4TYt8Fe61SbRS-=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Dragonfly Thai">         <b>📍 Address:</b><br>         50-A Peninsula Center, Rolling Hills Estates, CA 90274<br><br>         <b>🍽️ Cuisine:</b> Thai<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         A neighborhood place that has some of the best Pad Thai and Pad Kra Pow that I've had outside of a friends' moms' kitchen. It's good portions, relatively inexpensive, but I'd go after the high school lunch rush. It's walking distance, and there gets to be a bit of a rush.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.dragonflythaibistro.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_5367db4794673e4e4cbb4a11dce696ed.setContent(html_10e6a2eee29e78ef6fa020241d7acaf9);
+            
+        
+
+        circle_marker_8667bef564b60875bdf9745cfbe348cb.bindPopup(popup_5367db4794673e4e4cbb4a11dce696ed)
+        ;
+
+        
+    
+    
+            circle_marker_8667bef564b60875bdf9745cfbe348cb.bindTooltip(
+                `<div>
+                     Dragonfly Thai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3f70166eeb2852a51327736922cae94f = L.circleMarker(
+                [33.773947, -118.376374],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_10df374a759454bf1d11b86defc52c02 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c63ec061262927a376db085570cb549f = $(`<div id="html_c63ec061262927a376db085570cb549f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Pho Hana         </h4>         <img src="https://lh3.googleusercontent.com/gps-proxy/ALd4DhHk-EwBSYIVIDtp6597ad0ET3eyfBWk1BZdb5SSrsdz5fCOVvirM8j81aMZeo5-w-oBZfQMdDdgJkUb5O-Xf6QCq7gJLNfXIxmVkRn0L-KNlI5jaXYDam-u8LfdBWnye0FMgT_Seu391bBqmMGFlWN9Q8hmq1_ylK9N0xiJGZGvUJyrEKPu0KPJT1g=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Pho Hana">         <b>📍 Address:</b><br>         55-B Peninsula Center, Rolling Hills Estates, CA 90274<br><br>         <b>🍽️ Cuisine:</b> Vietnamese<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         All through middle and high school, this was the place we went to after all the important things. A bowl of pho from here is nostalgic, the bulgogi is enuogh to share, and if you're just running in then the boba is can't miss.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.noodlephoever.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_10df374a759454bf1d11b86defc52c02.setContent(html_c63ec061262927a376db085570cb549f);
+            
+        
+
+        circle_marker_3f70166eeb2852a51327736922cae94f.bindPopup(popup_10df374a759454bf1d11b86defc52c02)
+        ;
+
+        
+    
+    
+            circle_marker_3f70166eeb2852a51327736922cae94f.bindTooltip(
+                `<div>
+                     Pho Hana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3ab4927b26b42888a2182cb2626c45d9 = L.circleMarker(
+                [33.775729, -118.417967],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_3f44b4b987741bc5d30fbd460beb5104 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f25734e071b23211a8a29fef803bff14 = $(`<div id="html_f25734e071b23211a8a29fef803bff14" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Lunada Market and Deli         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerfmsGwF0x6k-BbYXEhtXWsES0CZPdw6sz__XoTIgGxSbGkYKGWBSNybBCwMOZ5Li7NhGtfQOvSUprgDloZEJ1rKMVs98NqkzlkgPO7oMCQLr-J3NxCiGQIQYYg1bRgz5p2Tq8=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Lunada Market and Deli">         <b>📍 Address:</b><br>         2201 Palos Verdes Dr W, Palos Verdes Estates, CA 90274<br><br>         <b>🍽️ Cuisine:</b> Breakfast<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         The smoothies here might be the best thing on their menu. I mostly came here to see my friends who were working on weekends, but it was the perfect pre-walk drink. The deli here also has great cuts of meat for grilling, and some are marinaded even!         </div>         <br><br><b>🌐 Website:</b> <a href="https://lunadamarket.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_3f44b4b987741bc5d30fbd460beb5104.setContent(html_f25734e071b23211a8a29fef803bff14);
+            
+        
+
+        circle_marker_3ab4927b26b42888a2182cb2626c45d9.bindPopup(popup_3f44b4b987741bc5d30fbd460beb5104)
+        ;
+
+        
+    
+    
+            circle_marker_3ab4927b26b42888a2182cb2626c45d9.bindTooltip(
+                `<div>
+                     Lunada Market and Deli
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_76c8cb958bb37b9144fefdf32923b7b2 = L.circleMarker(
+                [33.722239, -118.310488],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_ed35ca96d425880f17c6f1533b8c818a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c79e5a3bfa5c38aa801b1e8f88459d25 = $(`<div id="html_c79e5a3bfa5c38aa801b1e8f88459d25" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Seaside Bistro         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipNWO7U4t8W3FTmpV8-q6YSPSXD2DKDsbWSf7hnm=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Seaside Bistro">         <b>📍 Address:</b><br>         1420 W 25th St Unit A, San Pedro, CA 90732<br><br>         <b>🍽️ Cuisine:</b> Diner<br><br>         <b>👔 Attire:</b> Any<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         This is a perfect little bistro place where basically the whole menu is good. You'll probably run into someone's parents you know, so be on your best behavior. The clientele is almost exclusively locals, and if you go early enough half of them will be longshoremen. Their fries are probably my favorite part- they're crispy, pillowy. and thick enough to hold nicely onto some ranch but not so thick your mouth runs dry.          </div>         <br><br><b>🌐 Website:</b> <a href="https://sidebistro.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_ed35ca96d425880f17c6f1533b8c818a.setContent(html_c79e5a3bfa5c38aa801b1e8f88459d25);
+            
+        
+
+        circle_marker_76c8cb958bb37b9144fefdf32923b7b2.bindPopup(popup_ed35ca96d425880f17c6f1533b8c818a)
+        ;
+
+        
+    
+    
+            circle_marker_76c8cb958bb37b9144fefdf32923b7b2.bindTooltip(
+                `<div>
+                     Seaside Bistro
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a6363bd8d938df158959fd8bac3c6265 = L.circleMarker(
+                [33.722819, -118.311734],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_f42f8448f7e0297d0789942b7587118f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2b9dbf99821f4f5377d2737da6f1f8a6 = $(`<div id="html_2b9dbf99821f4f5377d2737da6f1f8a6" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Sorrento's         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqCpNdc69zVPzXOFmDs0Yj4rrvl20xMR-ZTxU8UJnh1zP8gd6uZMzGAW0ovEaPYYC5tZ8KX-4OChAtz-GfrlkP76GDYStG3-XgkHtBY9xK5IeHZK5yF3QURXUjt5zUABJeZO5k=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Sorrento's">         <b>📍 Address:</b><br>         2428 S Western Ave, San Pedro, CA 90732<br><br>         <b>🍽️ Cuisine:</b> Italian<br><br>         <b>👔 Attire:</b> Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         This is the type of place the Little League team comes to for celebratory pizzas after winning their games. It's warm, bursting with life, and the perfect neighborhood Italian spot. Get the Baked Rigatoni or the Chicken Parmasean- and if you eat in they both come with the world's best side salads.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.yelp.com/biz/sorrentos-restaurant-san-pedro" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_f42f8448f7e0297d0789942b7587118f.setContent(html_2b9dbf99821f4f5377d2737da6f1f8a6);
+            
+        
+
+        circle_marker_a6363bd8d938df158959fd8bac3c6265.bindPopup(popup_f42f8448f7e0297d0789942b7587118f)
+        ;
+
+        
+    
+    
+            circle_marker_a6363bd8d938df158959fd8bac3c6265.bindTooltip(
+                `<div>
+                     Sorrento's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_190ffcc9eccf10019f051e41ad7d6ef5 = L.circleMarker(
+                [34.002288, -118.488319],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_4510063f9993141292c3ff61af63372e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_58eecf77b6409c9249aa1e17fe6eb74d = $(`<div id="html_58eecf77b6409c9249aa1e17fe6eb74d" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Perry's         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweojAtI0X6FkYXwEq6RjHW5ginHEHUCBK4953W6nXAg4Yhn2mE6WucKG1FIYYXuVpn96-sVDori0aflhD-dRVH-Wcsq2BYJpiS-oj3uhRRnTGBJNnF8NdbLKbdVOjRANp8g7Ag8=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Perry's">         <b>📍 Address:</b><br>         2400 Ocean Front Walk, Santa Monica, CA 90405<br><br>         <b>🍽️ Cuisine:</b> Beach<br><br>         <b>👔 Attire:</b> Beach<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Perry's has a handful of stands up and down the beaches, and they're all tasty but this one has the best people watching. It's the perfect spot for a burger on the beach while you're still warm from the sun, though it can be a little pricey. This one is more of a restaurant, while most of the other locations are more about walkikng up and grabbing a hot dog. The hot dogs are amazing too, though sadly no Diet Coke.         </div>         <br><br><b>🌐 Website:</b> <a href="https://perryscafe.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_4510063f9993141292c3ff61af63372e.setContent(html_58eecf77b6409c9249aa1e17fe6eb74d);
+            
+        
+
+        circle_marker_190ffcc9eccf10019f051e41ad7d6ef5.bindPopup(popup_4510063f9993141292c3ff61af63372e)
+        ;
+
+        
+    
+    
+            circle_marker_190ffcc9eccf10019f051e41ad7d6ef5.bindTooltip(
+                `<div>
+                     Perry's
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_926493a51e1ca8bb93d2c54a4187a2ba = L.circleMarker(
+                [33.863596, -118.40003],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_b8894dbd24e8b290ebc791c45b99d60b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_580c186cf195d9cd280e19a19935459f = $(`<div id="html_580c186cf195d9cd280e19a19935459f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Fox & Farrow         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweowHc7CQZaE0AIx_Kj-3Ac3qSzWx2RIpc5ljiWykmeosm_aURRnWxMSqVtR_ogg0XLYX8eM3z3UvPogK3zm9sNRpvkLaeaVSeroKNEDKSV6bQE3miXRsb_a9ePpYNro7j1y_jCl=w243-h174-n-k-no-nu" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Fox & Farrow">         <b>📍 Address:</b><br>         1332 Hermosa Ave, Hermosa Beach, CA 90254<br><br>         <b>🍽️ Cuisine:</b> New American<br><br>         <b>👔 Attire:</b> Nice<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Any place that has a Pretzel Loaf as the first thing on the menu is an automatic win in my book, but it only gets better from there. But, don't get tricked by the first instance, and instead bypass it for focusing on the Sausage Selection, which changes all the time, which still incudes the pretzel loaf but with a fantastic selection of meats.  Without a doubt, the best thing I had was the Duck Pasta, hold te pine nuts. I still think about it- the shape of the pasta, the richness of the herb reduction... Yum.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.foxandfarrow.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_b8894dbd24e8b290ebc791c45b99d60b.setContent(html_580c186cf195d9cd280e19a19935459f);
+            
+        
+
+        circle_marker_926493a51e1ca8bb93d2c54a4187a2ba.bindPopup(popup_b8894dbd24e8b290ebc791c45b99d60b)
+        ;
+
+        
+    
+    
+            circle_marker_926493a51e1ca8bb93d2c54a4187a2ba.bindTooltip(
+                `<div>
+                     Fox & Farrow
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5c9895522831d0ef22a6d87598386d67 = L.circleMarker(
+                [33.828875, -118.346916],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_d4981cf3a53f27d283bdf0ecb786d27b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f7f47ac7cb8f00a8ddc4a4f68041968f = $(`<div id="html_f7f47ac7cb8f00a8ddc4a4f68041968f" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Frida         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipPPWAawEaCIl9sN-R8QLebj18ZQkdQd8WYOmHf2=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Frida">         <b>📍 Address:</b><br>         21438 Del Amo Cir N, Torrance, CA 90503<br><br>         <b>🍽️ Cuisine:</b> Mexican<br><br>         <b>👔 Attire:</b> Nice-Casual<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         It's not often that I find enchiladas that are as good as the ones from my roommate's abuela, but these are a close second. The mole is decadent, spicy, and just the right amount of bitter that you need it to be. The vibes are high, the chips are hot, and the margaritas are dangerous. Take an Uber.         </div>         <br><br><b>🌐 Website:</b> <a href="https://fridarestaurant.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_d4981cf3a53f27d283bdf0ecb786d27b.setContent(html_f7f47ac7cb8f00a8ddc4a4f68041968f);
+            
+        
+
+        circle_marker_5c9895522831d0ef22a6d87598386d67.bindPopup(popup_d4981cf3a53f27d283bdf0ecb786d27b)
+        ;
+
+        
+    
+    
+            circle_marker_5c9895522831d0ef22a6d87598386d67.bindTooltip(
+                `<div>
+                     Frida
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_929e229f8ebb170d2b0d8fb971f7ec7c = L.circleMarker(
+                [33.766845, -118.185725],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_4111365689dbf5a0340cd1f5e12f7f1b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bf56475e47860288070fc0ded9690e0c = $(`<div id="html_bf56475e47860288070fc0ded9690e0c" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             555 East         </h4>         <img src="https://lh3.googleusercontent.com/p/AF1QipOrJ_yxVkrQqqf3hH5o7bW4lMC9xi7X1pTsKeXJ=w289-h312-n-k-no" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="555 East">         <b>📍 Address:</b><br>         555 E Ocean Blvd, Long Beach, CA 90802<br><br>         <b>🍽️ Cuisine:</b> Steakhouse<br><br>         <b>👔 Attire:</b> Chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         Baked goat cheese, shrimp cocktail, I could go on and on. This is a classic steakhouse that guarentees their experience unconditionally. They have good legs to stand on, speaking absoolutely. You step back into 1957 when you walk in, and it's the most pleasant experience. Best shared with friends, their steaks are their pride and joy for a reason. Their daily cuts change (daily... duh) but give them a shot if you're feeling that type of dry-aged vibe.         </div>         <br><br><b>🌐 Website:</b> <a href="https://www.555east.com" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_4111365689dbf5a0340cd1f5e12f7f1b.setContent(html_bf56475e47860288070fc0ded9690e0c);
+            
+        
+
+        circle_marker_929e229f8ebb170d2b0d8fb971f7ec7c.bindPopup(popup_4111365689dbf5a0340cd1f5e12f7f1b)
+        ;
+
+        
+    
+    
+            circle_marker_929e229f8ebb170d2b0d8fb971f7ec7c.bindTooltip(
+                `<div>
+                     555 East
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8ccbb0448ec4008719d27a137226bd4f = L.circleMarker(
+                [33.851489, -118.398499],
+                {"bubblingMouseEvents": true, "color": "#8B0000", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#C41E3A", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+        
+    
+        var popup_4b166b243aed0de7e3c40399ce53a9dc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c7dcffd38388c18c9d9aeb87fe771c30 = $(`<div id="html_c7dcffd38388c18c9d9aeb87fe771c30" style="width: 100.0%; height: 100.0%;">     <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">             Chart House         </h4>         <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweq_ufiY5kKAbQdGsBEpSkl54GQzh2hF84zvZKTYdjdyU7Cp4P36qC2fNwDyyqYh2heSRP-zFWLLqlz79ugFFyhaHZoHpnlt_KTEHZ8iZj07y2QdsZ-StrhMhnIGXt2KQzETDSeWSBxv79m0=s1360-w1360-h1020" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="Chart House">         <b>📍 Address:</b><br>         231 Yacht Club Way, Redondo Beach, CA 90277<br><br>         <b>🍽️ Cuisine:</b> Steakhouse<br><br>         <b>👔 Attire:</b> Chic<br><br>         <b>📝 Description:</b><br>         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">         This is somewhere I wouldn't say to go unless it was a specific occasion. They host wine dinners regularly, and the experience is like no other. It feels top of the line, because it is, and you'll end up with an experience that can't be replicated or duplicated.          </div>         <br><br><b>🌐 Website:</b> <a href="https://www.chart-house.com/store-locator/" target="_blank">Visit Website</a>     </div>     </div>`)[0];
+                popup_4b166b243aed0de7e3c40399ce53a9dc.setContent(html_c7dcffd38388c18c9d9aeb87fe771c30);
+            
+        
+
+        circle_marker_8ccbb0448ec4008719d27a137226bd4f.bindPopup(popup_4b166b243aed0de7e3c40399ce53a9dc)
+        ;
+
+        
+    
+    
+            circle_marker_8ccbb0448ec4008719d27a137226bd4f.bindTooltip(
+                `<div>
+                     Chart House
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var layer_control_8560e71d8ece95ce49ad47232258cc42_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_e5bf4b381fb9e236350a9c5e4c5c6f14,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_8560e71d8ece95ce49ad47232258cc42 = L.control.layers(
+                layer_control_8560e71d8ece95ce49ad47232258cc42_layers.base_layers,
+                layer_control_8560e71d8ece95ce49ad47232258cc42_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_330059a3e7ef3d897bf8ec0e009a95e5);
+
+        
+</script>
 </html>

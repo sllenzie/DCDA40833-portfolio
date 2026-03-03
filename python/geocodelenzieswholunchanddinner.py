@@ -61,6 +61,7 @@ if MAPBOX_TOKEN == "PASTE_YOUR_MAPBOX_TOKEN_HERE":
     print("  https://account.mapbox.com/access-tokens/")
     exit()
 
+# For the record!! There's a public token you can get and use, and that's what is included in here. It's a special token that you can add specific URLs to be able to use. 
 
 # =============================================================================
 # STEP 3: DEFINE THE GEOCODING FUNCTION
