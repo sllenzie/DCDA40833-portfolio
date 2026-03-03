@@ -292,7 +292,7 @@ for i, row in df_mapped.iterrows():
     image_url = row["Image_URL"] if pd.notna(row["Image_URL"]) else ""
 
     # Add website link if available
-    website_html = f'<br><br><b>🌐 Website:</b> <a href="{website_display}" target="_blank">Visit Website</a>' if website_display else ""
+    website_html = f'<br><br><b>Website:</b> <a href="{website_display}" target="_blank">Visit Website</a>' if website_display else ""
     
     # Add image if available
     image_html = f'<img src="{image_url}" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="{row["Name"]}">' if image_url else ""
@@ -303,10 +303,10 @@ for i, row in df_mapped.iterrows():
             {row['Name']}
         </h4>
         {image_html}
-        <b>📍 Address:</b><br>
+        <b>Address:</b><br>
         {address_display}<br><br>
-        <b>🍽️ Cuisine:</b> {cuisine_display}<br><br>
-        <b>👔 Attire:</b> {attire_display}<br><br>
+        <b>Cuisine:</b> {cuisine_display}<br><br>
+        <b>Attire:</b> {attire_display}<br><br>
         <b>Stella's Thoughts:</b><br>
         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">
         {description_display}

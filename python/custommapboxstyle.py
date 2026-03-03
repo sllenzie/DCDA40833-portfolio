@@ -37,7 +37,7 @@ import os               # For file path operations
 # --- A) YOUR MAPBOX ACCESS TOKEN ---
 # Same token you used in Script 2 (starts with "pk.")
 # Find it at: https://account.mapbox.com/access-tokens/
-MAPBOX_TOKEN = "pk.eyJ1Ijoic2xsZW56aWUiLCJhIjoiY21tYXc5YXFlMGpwdDJ3b2ltaTU4dHIxaCJ9.yAsfpMXpkTRiH-Gvn0-J-g"
+MAPBOX_TOKEN = "pk.eyJ1Ijoic2xsZW56aWUiLCJhIjoiY21sdG13MjB3MDF5dTNlcHBqZGt0NGVvdSJ9.-DaMTxcKxtsIZSl9_S7wNg"
 
 # --- B) YOUR MAPBOX STYLE URL ---
 # This is the URL of the custom style you created in Mapbox Studio.
@@ -86,9 +86,8 @@ style_path = MAPBOX_STYLE_URL.replace("mapbox://styles/", "")
 
 # Build the tile URL using the Mapbox Styles API format
 # {z} = zoom level, {x} = tile column, {y} = tile row (these are filled in automatically)
-# @2x = requests high-resolution "retina" tiles for sharp display on modern screens
 TILE_URL = (
-    f"https://api.mapbox.com/styles/v1/{style_path}/tiles/256/{{z}}/{{x}}/{{y}}@2x"
+    f"https://api.mapbox.com/styles/v1/{style_path}/tiles/256/{{z}}/{{x}}/{{y}}"
     f"?access_token={MAPBOX_TOKEN}"
 )
 
@@ -157,7 +156,7 @@ title_html = """
      z-index: 1000; background-color: rgba(255,255,255,0.9); padding: 10px 20px;
      border: 2px solid #8B0000; border-radius: 8px; font-family: Georgia, serif;
      font-size: 16px; font-weight: bold; color: #8B0000; box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
-     🍽️ Lenzie Who Lunches and Dinners — Custom Style
+     Lenzie Who Lunches and Dinners — Custom Style
 </div>
 """
 restaurant_map.get_root().html.add_child(folium.Element(title_html))
@@ -175,7 +174,7 @@ for i, row in df_mapped.iterrows():
     image_url = row["Image_URL"] if pd.notna(row["Image_URL"]) else ""
 
     # Add website link if available
-    website_html = f'<br><br><b>🌐 Website:</b> <a href="{website_display}" target="_blank">Visit Website</a>' if website_display else ""
+    website_html = f'<br><br><b>Website:</b> <a href="{website_display}" target="_blank">Visit Website</a>' if website_display else ""
     
     # Add image if available
     image_html = f'<img src="{image_url}" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="{row["Name"]}">' if image_url else ""
@@ -186,10 +185,10 @@ for i, row in df_mapped.iterrows():
             {row['Name']}
         </h4>
         {image_html}
-        <b>📍 Address:</b><br>
+        <b>Address:</b><br>
         {address_display}<br><br>
-        <b>🍽️ Cuisine:</b> {cuisine_display}<br><br>
-        <b>👔 Attire:</b> {attire_display}<br><br>
+        <b>Cuisine:</b> {cuisine_display}<br><br>
+        <b>Attire:</b> {attire_display}<br><br>
         <b>Stella's Thoughts:</b><br>
         <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">
         {description_display}
