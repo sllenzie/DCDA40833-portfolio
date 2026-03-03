@@ -8,7 +8,7 @@
     <!-- Portfolio CSS -->
     <link rel="stylesheet" href="css/styles.css">
     
-    <!-- Leaflet CSS (no Bootstrap - it conflicts with portfolio styles) -->
+    <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
     
     <style>
@@ -88,27 +88,13 @@
     <main>
         <section>
             <h2>Introduction</h2>
-            <p>Welcome to "Lenzie Who Lunches and Dinners," a curated guide showcasing 60 of my favorite restaurants across the South Bay and Greater Los Angeles area. This interactive map combines my personal dining experiences with modern web mapping technology to help you discover exceptional local cuisine.</p>
+            <p>Welcome to "Lenzie Who Lunches and Dinners," a guide to some great restaurants all across the South Bay (for now) ranging from casual dining to quite fancy, and everything in between.</p>
             
-            <p>Whether you're looking for a casual breakfast spot, an upscale steakhouse, or the perfect place for a night out with friends, this guide has something for everyone. Each marker on the map represents a restaurant I've personally visited and recommend, complete with detailed descriptions, cuisine types, attire suggestions, and direct links to their websites.</p>
+            <p>All of these reviews and descriptions are based on my own experiences. Take the reccomendations with a grain of salt, as menu items may change seasonally and what I specifically reccomend may have been a limited time item.</p>
         </section>
 
         <section>
-            <h2>How to Use This Map</h2>
-            <p>The map below features all 60 restaurants plotted with custom styling using Mapbox. Click on any pink circle marker to see detailed information about each restaurant, including:</p>
-            <ul>
-                <li><strong>Name & Image:</strong> See what the restaurant looks like</li>
-                <li><strong>Address:</strong> Exact location with clickable Google Images</li>
-                <li><strong>Cuisine Type:</strong> From Chinese to French to Old-School Steakhouses</li>
-                <li><strong>Attire Suggestions:</strong> Know what to wear before you go</li>
-                <li><strong>Stella's Thoughts:</strong> My honest take on what to order and what to skip</li>
-                <li><strong>Website:</strong> Direct links to make reservations or view menus</li>
-            </ul>
-            <p>Use the map controls to zoom in and explore specific neighborhoods, or click markers to browse through different options. The restaurants span from Malibu to Long Beach, with heavy concentration in Manhattan Beach, Redondo Beach, Hermosa Beach, and Palos Verdes.</p>
-        </section>
-
-        <section>
-            <h2>Interactive Restaurant Map</h2>
+            <h2>Lenzie Who Lunches and Dinners</h2>
             <div class="map-container">
                 <div class="folium-map" id="map_189e6bca57f3f4ccd0c5ffd60ce7c9b9"></div>
             </div>
@@ -116,28 +102,19 @@
 
         <section>
             <h2>Technical Implementation</h2>
-            <p>This project showcases the integration of multiple technologies:</p>
+            <p>This project showcases the integration of several technologies:</p>
             <ul>
                 <li><strong>Python & Pandas:</strong> Data processing and CSV manipulation of restaurant information</li>
                 <li><strong>Folium:</strong> Python library for creating interactive Leaflet maps</li>
                 <li><strong>Mapbox:</strong> Custom map styling using my personal Mapbox style (mapbox://styles/sllenzie/cmm3t4ib900di01s520v04rtn)</li>
                 <li><strong>Leaflet.js:</strong> JavaScript mapping library powering the interactive features</li>
-                <li><strong>Coordinate Extraction:</strong> Automated extraction of 60 restaurant coordinates from existing map data</li>
-                <li><strong>Portfolio Integration:</strong> Seamlessly embedded within my existing portfolio structure with responsive design</li>
             </ul>
             <p>The custom Mapbox style provides a cohesive visual identity with two pink markers that complement the portfolio's color scheme.</p>
         </section>
 
         <section>
             <h2>About the Data</h2>
-            <p>All 60 restaurants were personally selected based on memorable dining experiences throughout my time in Southern California. The data includes comprehensive information: restaurant names, full addresses, cuisine categories, recommended attire, detailed personal reviews, official website links, and high-quality Google Images photos.</p>
-            
-            <p>From the casual comfort of Steve's Diner in Torrance to the elegant ambiance of  Mar'Sel at Terranea, this collection represents diverse dining experiences across different price points, cuisines, and atmospheres. Each entry reflects my genuine recommendations and honest opinions about menu items, atmosphere, and overall experience.</p>
-        </section>
-
-        <section>
-            <h2>Explore & Enjoy</h2>
-            <p>Whether you're a longtime South Bay resident or just visiting the area, I hope this interactive guide helps you discover new favorite spots or inspires you to try something different. Happy dining!</p>
+            <p>All the restaurants were selected based on positive, memorable dining experiences throughout my time in Southern California. The addition of other locations will come later. The dataset I made includes comprehensive information: restaurant names, full addresses, cuisine categories, recommended attire, detailed personal reviews, official website links, and high-quality Google Images photos.</p>
         </section>
     </main>
 
