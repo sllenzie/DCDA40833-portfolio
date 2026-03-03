@@ -50,7 +50,7 @@ import time             # For adding a small pause between API calls (be polite!
 # SECURITY NOTE: Never share your access token publicly or commit it to GitHub.
 # For now, pasting it directly in the script is fine for class exercises.
 
-MAPBOX_TOKEN = "PASTE_YOUR_MAPBOX_TOKEN_HERE"  # <-- REPLACE THIS WITH YOUR REAL TOKEN
+MAPBOX_TOKEN = "pk.eyJ1Ijoic2xsZW56aWUiLCJhIjoiY21tYXc5YXFlMGpwdDJ3b2ltaTU4dHIxaCJ9.yAsfpMXpkTRiH-Gvn0-J-g"  # <-- REPLACE THIS WITH YOUR REAL TOKEN
 
 # Quick check — remind the student if they forgot to set the token
 if MAPBOX_TOKEN == "PASTE_YOUR_MAPBOX_TOKEN_HERE":
@@ -169,7 +169,7 @@ for i, row in df.iterrows():
 
     # Build the full address string for geocoding.
     # We combine the address fields for the best possible result.
-    address = row.get("Full_Address", "")
+    address = row.get("Address", "")
 
     # Show progress so students can see the script is working
     name = row.get("Name", f"Row {i}")
@@ -222,7 +222,7 @@ print(f"  Placing {len(df_mapped)} markers on the map.")
 
 # --- Calculate the Map Center ---
 # We center the map on the average lat/lon of all our mapped restaurants.
-# This ensures the map opens centered on the South Bay. For now.
+# This ensures the map opens centered on your data.
 center_lat = df_mapped["Latitude"].mean()
 center_lon = df_mapped["Longitude"].mean()
 
@@ -249,24 +249,41 @@ title_html = """
 """
 napa_map.get_root().html.add_child(folium.Element(title_html))
 
-# --- Add a Marker for Each Winery ---
-# We loop through each geocoded winery and add a map marker.
+# --- Add a Marker for Each Restaurant ---
+# We loop through each geocoded restaurant and add a map marker.
 for i, row in df_mapped.iterrows():
 
     # Build the popup HTML content.
     # A "popup" is the text box that appears when you click a marker.
-    # We format it as a small HTML card with the winery's details.
-    phone_display = row["Phone"] if row["Phone"] else "Not listed"
-    address_display = row["Full_Address"] if row["Full_Address"] else "Address not available"
+    # We format it as a small HTML card with the restaurant's details.
+    address_display = row["Address"] if pd.notna(row["Address"]) else "Address not available"
+    cuisine_display = row["Cuisine"] if pd.notna(row["Cuisine"]) else "Not listed"
+    attire_display = row["Attire"] if pd.notna(row["Attire"]) else "Not specified"
+    description_display = row["Description"] if pd.notna(row["Description"]) else "No description available"
+    website_display = row["Website"] if pd.notna(row["Website"]) else ""
+    image_url = row["Image_URL"] if pd.notna(row["Image_URL"]) else ""
+
+    # Add website link if available
+    website_html = f'<br><br><b>🌐 Website:</b> <a href="{website_display}" target="_blank">Visit Website</a>' if website_display else ""
+    
+    # Add image if available
+    image_html = f'<img src="{image_url}" style="width: 100%; max-width: 280px; height: auto; border-radius: 4px; margin-bottom: 10px;" alt="{row["Name"]}">' if image_url else ""
 
     popup_html = f"""
-    <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 200px;">
+    <div style="font-family: Arial, sans-serif; font-size: 13px; min-width: 250px; max-width: 300px;">
         <h4 style="margin: 0 0 8px 0; color: #8B0000; border-bottom: 1px solid #ccc; padding-bottom: 4px;">
             {row['Name']}
         </h4>
+        {image_html}
         <b>📍 Address:</b><br>
         {address_display}<br><br>
-        <b>📞 Phone:</b> {phone_display}
+        <b>🍽️ Cuisine:</b> {cuisine_display}<br><br>
+        <b>👔 Attire:</b> {attire_display}<br><br>
+        <b>📝 Description:</b><br>
+        <div style="max-height: 100px; overflow-y: auto; font-size: 12px;">
+        {description_display}
+        </div>
+        {website_html}
     </div>
     """
 
@@ -275,7 +292,7 @@ for i, row in df_mapped.iterrows():
     folium.CircleMarker(
         location=[row["Latitude"], row["Longitude"]],  # Position on the map
         radius=6,               # Size of the circle in pixels
-        color="#8B0000",        # Circle border color (dark red — wine-colored!)
+        color="#8B0000",        # Circle border color (dark red)
         fill=True,              # Fill the circle with color
         fill_color="#C41E3A",   # Fill color (crimson red)
         fill_opacity=0.7,       # Transparency: 0.0 = invisible, 1.0 = solid
@@ -306,5 +323,3 @@ print(f"\nTo view your map:")
 print(f"  1. In VS Code, right-click on: {map_output_path}")
 print(f"  2. Select 'Open with Live Server' (if installed)")
 print(f"  3. OR open the file directly in your web browser")
-print(f"\nNext step: Follow Step 4 in your instructions to build a")
-print(f"  custom Mapbox style, then run Script 3.")
