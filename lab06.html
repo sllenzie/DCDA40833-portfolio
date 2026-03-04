@@ -88,7 +88,10 @@
     <main>
         <section>
             <h2>Introduction</h2>
-            <p>Welcome to "Lenzie Who Lunches and Dinners," a guide to some great restaurants all across the South Bay (for now) ranging from casual dining to quite fancy, and everything in between.</p>
+
+            <p>When I was a kid, during the era of blogging, my mom had one. I was so opinionated and articulate with what I said all the times we ate out to eat (thanks, Food Network) that my mom suggested we turn it into a blog. It took a long time to come up with a name, and even longer for the four posts that used to be live at a long-forgotten website that has long since been buried in the internet archives. Frankly, I had forgotten how much I liked this type of review for restaurants I had been to.</p>
+
+            <p>I got the green light to focus on restaurants in the South Bay area (with a couple in Hollywood and one in Maliu) as long as I included additional categories. I decided to include a category for type of cuisine, recommended attire, and somewhere for my thoughts and opinions to live, in addition to the venue’s name, address, a photo of the interior or exterior, and a link to their website. Seems simple, right? My fingers flew through the keyboard, pausing only to try to remember where in California certain restaurants might live… and before I knew it I had more than fifty entries. I was supposed to have ten. I decided sixty was a good number to sit at for this project and began the arduous task of creating this massive CSV file.</p>
             
             <p>All of these reviews and descriptions are based on my own experiences. Take the reccomendations with a grain of salt, as menu items may change seasonally and what I specifically reccomend may have been a limited time item.</p>
         </section>
@@ -101,21 +104,40 @@
         </section>
 
         <section>
-            <h2>Technical Implementation</h2>
-            <p>This project showcases the integration of several technologies:</p>
-            <ul>
-                <li><strong>Python & Pandas:</strong> Data processing and CSV manipulation of restaurant information</li>
-                <li><strong>Folium:</strong> Python library for creating interactive Leaflet maps</li>
-                <li><strong>Mapbox:</strong> Custom map styling using my personal Mapbox style (mapbox://styles/sllenzie/cmm3t4ib900di01s520v04rtn)</li>
-                <li><strong>Leaflet.js:</strong> JavaScript mapping library powering the interactive features</li>
-            </ul>
-            <p>The custom Mapbox style provides a cohesive visual identity with two pink markers that complement the portfolio's color scheme.</p>
+            <h2>
         </section>
 
         <section>
-            <h2>About the Data</h2>
-            <p>All the restaurants were selected based on positive, memorable dining experiences throughout my time in Southern California. The addition of other locations will come later. The dataset I made includes comprehensive information: restaurant names, full addresses, cuisine categories, recommended attire, detailed personal reviews, official website links, and high-quality Google Images photos.</p>
+
+            <h2>The Actual Code</h2>
+
+            <p>95% of the Python code is directly from the Napa Winery exercise that we accomplished in class. It took a significant bit of cleaning in order to clean up and change the correct file paths and names in order to include the additional descriptions and information that I included. I had to run it a few times for whatever reason in order to get the longitude and latitude coordinates to save in the improved CSV file. Specifically, the part that I had help from my good friend CoPilot for was making sure my MapBox token and files were sticking and in the right place. I prompted it bluntly, and it was successful in identifying the main issues. Part of this issue came from the warning of publishing the MapBox token that was supposed to be unique to me, but there is a convenient workaround. If you make the main published file, make the token public, and add in specific URLs that are allowed to pull from the information that will otherwise be blocked by the software itself. I haven’t tested it at length, but that’s supposed to be how it works in theory. </p>
+
         </section>
+
+        <section>
+
+            <h2>MapBox and Inspiration</h2>
+
+            <p>Speaking of MapBox, especially since I was given a second partial green light to continue working on this project potentially for the final capstone, I wanted my color palette to match, well, me. I love patterns from the likes of Lily Pulitzer that combine a lot of shades of pink and green together with white, which perfectly matches the color palette I already have in place along the rest of the site, including the new headshot that I included in between Lab 5 and now. I used the vibrant greens to showcase the land elevations, and the pinks to show the roads on the ever so slight beige of the background. I kept the water blue, but I added some shadowing to it that I’ve seen in other prints. It’s a little Vera Bradley, a little Lily Pulitzer, and a lot me.</p>
+
+            <img src="images/printspo3.jpg" alt="Lilly Pulitzer Anya Print" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-top: 1rem;">
+
+            <img src="images/printspo.jpg" alt="Lilly Pulitzer Palm Tree Print" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; margin-top: 1rem;">
+
+            <p>I kept most of the zoom features present that were recommended from the software as a default, but I decided to lighten the roads as the user zooms in, because the roads would get too dense in the more urban areas of Los Angeles. As far as the map box itself, I needed to change the length of the frame because in a few of the responses I got a little too wordy and it wasn’t showing all at once for the user. </p>
+
+        </section>
+
+        <section>
+
+            <h2>Conclusion</h2>
+            
+            <p>Overall, this project was incredibly fun to put together! I really enjoyed it and I look forward to expanding it as much as I can for my Capstone, possibly including even international venues.</p>
+
+        </section>
+
+
     </main>
 
     <footer>
